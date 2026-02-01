@@ -1,14 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-⚠️ Solana data is available from epoch 257 (11/12/2021)
-
-- We use cursor for pagination. On the first request, pass the necessary filters except `cursor`. It will return a field called `next_cursor` for pagination. On the next request, pass this `next_cursor` value into the param `cursor`.
 - When passing `cursor` param with other params, only `cursor` is in effect.
 - Support 4 transfer types: mint, burn, transfer and set\_authority
 
@@ -98,8 +88,6 @@ object
 
 required
 
-Has additional fields
-
 # `` 400      Bad Request
 
 # `` 401      Unauthorized. API key is missing or invalid
@@ -110,15 +98,7 @@ Has additional fields
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -140,8 +120,6 @@ curl --request POST \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -202,12 +180,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

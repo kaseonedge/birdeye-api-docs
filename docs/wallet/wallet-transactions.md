@@ -103,22 +103,7 @@ JSON
 
 **Sample code** [https://github.com/TheNang2710/bds-public/blob/main/ws-wallet.js](https://github.com/TheNang2710/bds-public/blob/main/ws-wallet.js)
 
-Updated 24 days ago
+* * *
 
 * * *
 
-Did this page help you?
-
-Yes
-
-No
-
-Updated 24 days ago
-
-* * *
-
-Did this page help you?
-
-Yes
-
-No

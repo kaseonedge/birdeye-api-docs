@@ -1,12 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- Initial Request:
   - Do not include the scroll\_id parameter.
   - A next\_scroll\_id will be returned in the response.
 - Subsequent Requests:
@@ -508,15 +500,7 @@ integer
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -536,8 +520,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -674,12 +656,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

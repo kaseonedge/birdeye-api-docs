@@ -1,12 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- Standard
 - Lite
 - Starter
 - Premium
@@ -133,8 +125,6 @@ object
 
 required
 
-Has additional fields
-
 # `` 400      Bad Request
 
 # `` 401      Unauthorized. API key is missing or invalid
@@ -145,15 +135,7 @@ Has additional fields
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -173,8 +155,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -239,12 +219,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

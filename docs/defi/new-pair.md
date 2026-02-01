@@ -96,24 +96,8 @@ JSON
 | `data.txHash` | string | The transaction hash for the creation of the trading pair. | "3CzXpuUJV9KryVDMN5nFAqH87TfueWG6sUiksbf3Akh9eqGNJW1CJtYbrELJixXC77Dyutz8CfT3eP1uJ3LP3iy5" |
 | `data.blockTime` | integer | The Unix timestamp when the trading pair was created. | 1720156781 |
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No
-
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 StripeM-Inner

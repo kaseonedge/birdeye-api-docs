@@ -1,12 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- Business
 - Enterprise
 
 list\_timeframe
@@ -183,15 +175,7 @@ Lowest scaled price during the timeframe
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -223,8 +207,6 @@ curl --request POST \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -281,12 +263,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

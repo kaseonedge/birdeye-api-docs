@@ -1,16 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-Frames selection is only supported on solana, base, bsc, ethereum
-
-Usage notes:
-
-- User can optionally select one or multiple timeframes using the `frames` parameter.
 - If `frames` are not specified, the API will return data for default timeframes: 1m 5m 30m 1h 2h 4h 8h 24h.
 - If `frames` include both supported and unsupported intervals, only supported intervals will be returned.
 - Custom supported timeframes are time intervals separated by comma (,). Users can pass up to 8 intervals. Rules:
@@ -1192,15 +1180,7 @@ required
 
 # `` 500      Internal Server Error
 
-Updated 3 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -1220,8 +1200,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -1722,12 +1700,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 3 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

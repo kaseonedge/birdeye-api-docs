@@ -1,12 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- Always use the checksum contract address on supported chains.
 - Response may be `null` or missing data if the token is unknown or unsupported.
 - Cache or throttle requests to avoid hitting rate limits.
 
@@ -112,8 +104,6 @@ object
 
 required
 
-Has additional fields
-
 logo\_uri
 
 string
@@ -130,15 +120,7 @@ required
 
 # `` 500      Internal Server Error
 
-Updated 17 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -158,8 +140,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -212,14 +192,6 @@ xxxxxxxxxx
 }
 ```
 
-Updated 17 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 StripeM-Inner

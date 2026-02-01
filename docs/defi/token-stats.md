@@ -287,24 +287,8 @@ JSON
 | `unique_wallet_8h` | integer | Number of unique wallets transacting in last 8 hours | 7,487 |
 | `unique_wallet_24h` | integer | Number of unique wallets transacting in last 24 hours | 14,036 |
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No
-
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 StripeM-Inner

@@ -83,22 +83,7 @@ node ws-base-quote.js solana So11111111111111111111111111111111111111112 EPjFWdd
 - This example subscribes to real-time price updates for a token pair and logs the Open, High, Low, Close, and Volume data to the console. The subscription is automatically closed after 1 hour.
 - This WebSocket only support 1 base-quote pair for 1 connection. You need to open another connection for new base-quote subscription.
 
-Updated 24 days ago
+* * *
 
 * * *
 
-Did this page help you?
-
-Yes
-
-No
-
-Updated 24 days ago
-
-* * *
-
-Did this page help you?
-
-Yes
-
-No

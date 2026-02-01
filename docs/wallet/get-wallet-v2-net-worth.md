@@ -1,12 +1,3 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
-
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- `count`: Specifies how many intervals (hours or days) to include.
 
   - Example: `count`=5 with `type`=1d returns five days of data (either backward or forward).
 - `type`: Defines the time unit for `count`. Accepts: 1h (hourly) or 1d (daily).
@@ -120,8 +111,6 @@ object
 
 required
 
-Has additional fields
-
 # `` 400      Bad Request
 
 # `` 401      Unauthorized. API key is missing or invalid
@@ -132,15 +121,7 @@ Has additional fields
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -160,8 +141,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -210,12 +189,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

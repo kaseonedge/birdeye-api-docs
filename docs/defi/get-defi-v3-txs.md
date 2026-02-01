@@ -1,12 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- Solana notes:
   - Transaction data includes `signers` — a list of accounts that authorize the transaction with their signatures.
 - If time range and block number range are not provided:
   - If sort\_by = block\_unix\_time, default to fetching swaps within the last 7 days.
@@ -221,15 +213,7 @@ required
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -249,8 +233,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -351,12 +333,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

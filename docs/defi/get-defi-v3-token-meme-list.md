@@ -1,12 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- Returns: Basic info such as token name, symbol, address, price, volume, market cap, and popularity score.
 - Data Availability:
   - pump\_dot\_fun, moonshot, raydium\_launchlab: From 2025/06/20
   - meteora\_dynamic\_bonding\_curve: From 2025/09/20
@@ -437,15 +429,7 @@ required
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -465,8 +449,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -789,12 +771,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

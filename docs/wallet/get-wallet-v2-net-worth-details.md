@@ -1,12 +1,3 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
-
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- `type`: Defines the time unit for `count`. Accepts: 1h (hourly) or 1d (daily). Time must be within the last 7 days when `type` is 1h.
 
   - Example: `type=1h` means `count=5` covers five hours.
 - `time`: Base timestamp in ISO 8601 UTC format (`YYYY-MM-DD HH:MM:SS`).
@@ -115,8 +106,6 @@ object
 
 required
 
-Has additional fields
-
 # `` 400      Bad Request
 
 # `` 401      Unauthorized. API key is missing or invalid
@@ -127,15 +116,7 @@ Has additional fields
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -155,8 +136,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -225,12 +204,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

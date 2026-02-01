@@ -1,12 +1,4 @@
-| Time | Status | User Agent |  |
-| :-- | :-- | :-- | :-- |
-| Make a request to see history. |
 
-#### URL Expired
-
-The URL for this request expired after 30 days.
-
-- Input: Requires a Solana token address as a query parameter.
 - Returns: Detailed token metrics such as:
   - Price, 24h volume, market cap
   - Price change, popularity score
@@ -59,8 +51,6 @@ object
 
 required
 
-Has additional fields
-
 # `` 400      Bad Request
 
 # `` 401      Unauthorized. API key is missing or invalid
@@ -71,15 +61,7 @@ Has additional fields
 
 # `` 500      Internal Server Error
 
-Updated 24 days ago
-
 * * *
-
-Did this page help you?
-
-Yes
-
-No
 
 ShellPythonJavaScriptGo
 
@@ -99,8 +81,6 @@ curl --request GET \
 ```
 
 xxxxxxxxxx
-
-
 
 {
 
@@ -207,12 +187,5 @@ xxxxxxxxxx
 }
 ```
 
-Updated 24 days ago
-
 * * *
 
-Did this page help you?
-
-Yes
-
-No

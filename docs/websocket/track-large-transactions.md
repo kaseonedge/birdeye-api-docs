@@ -76,22 +76,7 @@ JSON
 `network`: Blockchain network where the trade occurred.
 `from` and `to`: Details of the traded assets, including symbols, addresses, amounts, and pricing information.
 
-Updated 24 days ago
+* * *
 
 * * *
 
-Did this page help you?
-
-Yes
-
-No
-
-Updated 24 days ago
-
-* * *
-
-Did this page help you?
-
-Yes
-
-No

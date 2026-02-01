@@ -174,22 +174,7 @@ JSON
 
 Please note that the provided examples in the output sections are truncated for brevity. The actual output may contain additional fields and information. Adapt the subscription messages according to your requirements and process the received real-time data accordingly.
 
-Updated 24 days ago
+* * *
 
 * * *
 
-Did this page help you?
-
-Yes
-
-No
-
-Updated 24 days ago
-
-* * *
-
-Did this page help you?
-
-Yes
-
-No

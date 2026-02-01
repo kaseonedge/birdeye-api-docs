@@ -35,7 +35,7 @@ solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfog
 
 ## Responses
 
-**200**✅ - JSON object containing list of price stats of tokens
+**200** ✅ - JSON object containing list of price stats of tokens
 
 
 success
@@ -126,19 +126,19 @@ scaled\_low
 
 Lowest scaled price during the timeframe
 
-**400**⚠️ - Bad Request
+**400** ⚠️ - Bad Request
 
 
-**401**⚠️ - Unauthorized. API key is missing or invalid
+**401** ⚠️ - Unauthorized. API key is missing or invalid
 
 
-**403**⚠️ - Forbidden. Request is blacklisted or not whitelisted
+**403** ⚠️ - Forbidden. Request is blacklisted or not whitelisted
 
 
-**429**⚠️ - Too Many Requests. Rate limit reached
+**429** ⚠️ - Too Many Requests. Rate limit reached
 
 
-**500**⚠️ - Internal Server Error
+**500** ⚠️ - Internal Server Error
 
 
 ShellPythonJavaScriptGo

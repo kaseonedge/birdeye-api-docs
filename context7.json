@@ -1,0 +1,17 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "BirdEye API",
+  "description": "BirdEye API - Real-time DeFi data, token prices, wallet analytics, and market data across Solana and EVM chains",
+  "folders": ["docs"],
+  "excludeFolders": [],
+  "excludeFiles": [],
+  "rules": [
+    "Always use the checksum contract address on supported chains",
+    "Solana and EVM chains have different response schemas",
+    "Include the x-chain header or query parameter to specify the blockchain",
+    "Cache or throttle requests to avoid hitting rate limits",
+    "Response may be null or missing data if the token is unknown or unsupported",
+    "Use the public-api.birdeye.so base URL for all API requests",
+    "API key authentication is required for most endpoints"
+  ]
+}

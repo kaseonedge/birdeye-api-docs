@@ -1,0 +1,202 @@
+| Time | Status | User Agent |  |
+| :-- | :-- | :-- | :-- |
+| Make a request to see history. |
+
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+- Business
+- Enterprise
+
+list\_address
+
+string
+
+required
+
+A list of token addresses in string separated by commas (,)
+
+ui\_amount\_mode
+
+string
+
+enum
+
+Defaults to scaled
+
+Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
+
+rawscaled
+
+Allowed:
+
+`raw``scaled`
+
+x-chain
+
+string
+
+enum
+
+Defaults to solana
+
+A chain name listed in supported networks.
+
+solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
+
+Show 15 enum values
+
+# `` 200      JSON object containing market data of multiple tokens
+
+object
+
+success
+
+boolean
+
+required
+
+data
+
+object
+
+required
+
+A hashmap with token addresses as keys and the Token Market Data object as value
+
+View Additional Properties
+
+# `` 400      Bad Request
+
+# `` 401      Unauthorized. API key is missing or invalid
+
+# `` 403      Forbidden. Request is blacklisted or not whitelisted
+
+# `` 429      Too Many Requests. Rate limit reached
+
+# `` 500      Internal Server Error
+
+Updated 24 days ago
+
+* * *
+
+Did this page help you?
+
+Yes
+
+No
+
+ShellPythonJavaScriptGo
+
+```
+
+xxxxxxxxxx
+
+curl --request GET \
+
+     --url 'https://public-api.birdeye.so/defi/v3/token/market-data/multiple?ui_amount_mode=scaled' \
+
+     --header 'accept: application/json' \
+
+     --header 'x-chain: solana'
+```
+
+```
+
+xxxxxxxxxx
+
+
+
+{
+
+  "success": true,
+
+  "data": {
+
+    "So11111111111111111111111111111111111111112": {
+
+      "address": "So11111111111111111111111111111111111111112",
+
+      "price": 185.9491010572536,
+
+      "liquidity": 23338480211.61425,
+
+      "total_supply": 607187786.3995525,
+
+      "circulating_supply": 539542585.1183889,
+
+      "fdv": 112906023053.9405,
+
+      "market_cap": 100327458684.87115,
+
+      "holder": 398897,
+
+      "is_scaled_ui_token": false,
+
+      "multiplier": null
+
+    },
+
+    "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So": {
+
+      "address": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+
+      "price": 244.42542119470204,
+
+      "liquidity": 41563027.3417533,
+
+      "total_supply": 3548170.779026702,
+
+      "circulating_supply": 3548170.779026702,
+
+      "fdv": 867263137.1343358,
+
+      "market_cap": 867263137.1343358,
+
+      "holder": 3498897,
+
+      "is_scaled_ui_token": false,
+
+      "multiplier": null
+
+    },
+
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+
+      "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+
+      "price": 0.9999,
+
+      "liquidity": 1317751947.580185,
+
+      "total_supply": 8861727603.599123,
+
+      "circulating_supply": 8861727603.599123,
+
+      "fdv": 8860841430.838762,
+
+      "market_cap": 8860841430.838762,
+
+      "holder": 498897,
+
+      "is_scaled_ui_token": false,
+
+      "multiplier": null
+
+    }
+
+  }
+
+}
+```
+
+Updated 24 days ago
+
+* * *
+
+Did this page help you?
+
+Yes
+
+No

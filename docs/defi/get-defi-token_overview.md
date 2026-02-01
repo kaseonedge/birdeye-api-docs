@@ -1,0 +1,677 @@
+| Time | Status | User Agent |  |
+| :-- | :-- | :-- | :-- |
+| Make a request to see history. |
+
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+Frames selection is only supported on solana, base, bsc, ethereum
+
+Usage notes:
+
+- User can optionally select one or multiple timeframes using the `frames` parameter.
+- If `frames` are not specified, the API will return data for default timeframes: 1m 5m 30m 1h 2h 4h 8h 24h.
+- If `frames` include both supported and unsupported intervals, only supported intervals will be returned.
+- Custom supported timeframes are time intervals separated by comma (,). Users can pass up to 8 intervals. Rules:
+  - Supported chains: solana, base, bsc, ethereum
+  - Hours intervals: only support 1h 2h 4h 8h 24h
+  - Minute intervals: must be from 1m up to 1440m (e.g. 1m,15m,16m,17m,89m,90m,92m,1440m ...).
+  - Second intervals: must be multiples of 5s, from 5s up to 3600s (e.g. 5s,10s,15s,90s,3600s.
+
+address
+
+string
+
+required
+
+The address of the token contract.
+
+frames
+
+string
+
+A list of custom time intervals separated by comma (,). Users can pass up to 8 intervals.
+Rules:
+
+- Minute intervals: from 1m up to 1440m (e.g. 1m,15m,16m,17m,89m,90m,92m,1440m ...).
+- Second intervals: must be multiples of 5s, from 5s up to 3600s (e.g. 5s,10s,15s,90s,3600s ...).
+- Hours intervals: only support (1h 2h 4h 8h 24h)
+
+ui\_amount\_mode
+
+string
+
+enum
+
+Defaults to scaled
+
+Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
+
+rawscaled
+
+Allowed:
+
+`raw``scaled`
+
+x-chain
+
+string
+
+enum
+
+Defaults to solana
+
+A chain name listed in supported networks.
+
+solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
+
+Show 15 enum values
+
+# `` 200      JSON object containing overview information of a token
+
+object
+
+success
+
+boolean
+
+required
+
+data
+
+object
+
+required
+
+Has additional fields
+
+# `` 400      Bad Request
+
+# `` 401      Unauthorized. API key is missing or invalid
+
+# `` 403      Forbidden. Request is blacklisted or not whitelisted
+
+# `` 429      Too Many Requests. Rate limit reached
+
+# `` 500      Internal Server Error
+
+Updated 3 days ago
+
+* * *
+
+Did this page help you?
+
+Yes
+
+No
+
+ShellPythonJavaScriptGo
+
+```
+
+xxxxxxxxxx
+
+curl --request GET \
+
+     --url 'https://public-api.birdeye.so/defi/token_overview?ui_amount_mode=scaled' \
+
+     --header 'accept: application/json' \
+
+     --header 'x-chain: solana'
+```
+
+```
+
+xxxxxxxxxx
+
+
+
+{
+
+  "success": true,
+
+  "data": {
+
+    "address": "So11111111111111111111111111111111111111112",
+
+    "decimals": 9,
+
+    "symbol": "SOL",
+
+    "name": "Wrapped SOL",
+
+    "marketCap": 100263084724.62823,
+
+    "fdv": 112833577331.7062,
+
+    "extensions": {
+
+      "coingeckoId": "solana",
+
+      "serumV3Usdc": "9wFFyRfZBsuAha4YcuxcXLKwMxJR43S7fPfQLusDBzvT",
+
+      "serumV3Usdt": "HWHvQhFmJB3NUcu1aihKmrKegfVxBEHzwVX6yZCKEsi1",
+
+      "website": "https://solana.com/",
+
+      "telegram": null,
+
+      "twitter": "https://twitter.com/solana",
+
+      "description": "Wrapped Solana ",
+
+      "discord": "https://discordapp.com/invite/pquxPsq",
+
+      "medium": "https://medium.com/solana-labs"
+
+    },
+
+    "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png",
+
+    "liquidity": 23353595552.52654,
+
+    "lastTradeUnixTime": 1754885472,
+
+    "lastTradeHumanTime": "2025-08-11T04:11:12",
+
+    "price": 185.82977629057913,
+
+    "history1mPrice": 185.79442728744755,
+
+    "priceChange1mPercent": 0.01902586834689952,
+
+    "history5mPrice": 185.64908719930227,
+
+    "priceChange5mPercent": 0.09732829501223636,
+
+    "history30mPrice": 184.58275803998023,
+
+    "priceChange30mPercent": 0.675587613838123,
+
+    "history1hPrice": 184.82378809782267,
+
+    "priceChange1hPercent": 0.5442958415201495,
+
+    "history2hPrice": 184.48623316778523,
+
+    "priceChange2hPercent": 0.7282619953392334,
+
+    "history4hPrice": 182.01858574612513,
+
+    "priceChange4hPercent": 2.093846916143914,
+
+    "history6hPrice": 183.3662593572315,
+
+    "priceChange6hPercent": 1.3434952220671261,
+
+    "history8hPrice": 182.781521215397,
+
+    "priceChange8hPercent": 1.6677041830667094,
+
+    "history12hPrice": 181.73998251416327,
+
+    "priceChange12hPercent": 2.2503544458617606,
+
+    "history24hPrice": 184.76148770760037,
+
+    "priceChange24hPercent": 0.5781987340724478,
+
+    "uniqueWallet1m": 7188,
+
+    "uniqueWalletHistory1m": 7299,
+
+    "uniqueWallet1mChangePercent": -1.5207562679819153,
+
+    "uniqueWallet5m": 23670,
+
+    "uniqueWalletHistory5m": 32416,
+
+    "uniqueWallet5mChangePercent": -26.98050345508391,
+
+    "uniqueWallet30m": 101456,
+
+    "uniqueWalletHistory30m": 74756,
+
+    "uniqueWallet30mChangePercent": 35.71619669324201,
+
+    "uniqueWallet1h": 144003,
+
+    "uniqueWalletHistory1h": 191107,
+
+    "uniqueWallet1hChangePercent": -24.64797207846913,
+
+    "uniqueWallet2h": 292417,
+
+    "uniqueWalletHistory2h": 206753,
+
+    "uniqueWallet2hChangePercent": 41.4330142730698,
+
+    "uniqueWallet4h": 426036,
+
+    "uniqueWalletHistory4h": 248734,
+
+    "uniqueWallet4hChangePercent": 71.28177088777569,
+
+    "uniqueWallet8h": 587111,
+
+    "uniqueWalletHistory8h": 623567,
+
+    "uniqueWallet8hChangePercent": -5.846364544627923,
+
+    "uniqueWallet24h": 1394679,
+
+    "uniqueWalletHistory24h": 1454172,
+
+    "uniqueWallet24hChangePercent": -4.091194164101633,
+
+    "totalSupply": 607187823.0928401,
+
+    "circulatingSupply": 539542621.8877238,
+
+    "holder": 3472782,
+
+    "trade1m": 17469,
+
+    "tradeHistory1m": 18850,
+
+    "trade1mChangePercent": -7.326259946949603,
+
+    "sell1m": 9852,
+
+    "sellHistory1m": 10653,
+
+    "sell1mChangePercent": -7.51900872993523,
+
+    "buy1m": 7617,
+
+    "buyHistory1m": 8197,
+
+    "buy1mChangePercent": -7.075759424179578,
+
+    "v1m": 26463.910059272,
+
+    "v1mUSD": 4916069.30362933,
+
+    "vHistory1m": 31502.769373499003,
+
+    "vHistory1mUSD": 5845693.180421255,
+
+    "v1mChangePercent": -15.994972551415849,
+
+    "vBuy1m": 14173.111565352001,
+
+    "vBuy1mUSD": 2632923.854699539,
+
+    "vBuyHistory1m": 18145.89539667,
+
+    "vBuyHistory1mUSD": 3367492.6286006058,
+
+    "vBuy1mChangePercent": -21.893567357646372,
+
+    "vSell1m": 12290.79849392,
+
+    "vSell1mUSD": 2283145.4489297913,
+
+    "vSellHistory1m": 13356.873976829002,
+
+    "vSellHistory1mUSD": 2478200.551820649,
+
+    "vSell1mChangePercent": -7.981474443484225,
+
+    "trade5m": 91739,
+
+    "tradeHistory5m": 108986,
+
+    "trade5mChangePercent": -15.824968344558016,
+
+    "sell5m": 53591,
+
+    "sellHistory5m": 66851,
+
+    "sell5mChangePercent": -19.835155794228957,
+
+    "buy5m": 38148,
+
+    "buyHistory5m": 42135,
+
+    "buy5mChangePercent": -9.4624421502314,
+
+    "v5m": 148180.406499723,
+
+    "v5mUSD": 27497701.609222054,
+
+    "vHistory5m": 144981.31597421103,
+
+    "vHistory5mUSD": 26875267.526915293,
+
+    "v5mChangePercent": 2.2065536541832875,
+
+    "vBuy5m": 75042.90142003099,
+
+    "vBuy5mUSD": 13926318.79128133,
+
+    "vBuyHistory5m": 75167.25709972801,
+
+    "vBuyHistory5mUSD": 13934408.671477377,
+
+    "vBuy5mChangePercent": -0.1654386291254898,
+
+    "vSell5m": 73137.50507969201,
+
+    "vSell5mUSD": 13571382.817940727,
+
+    "vSellHistory5m": 69814.058874483,
+
+    "vSellHistory5mUSD": 12940858.855437916,
+
+    "vSell5mChangePercent": 4.760425419734085,
+
+    "trade30m": 682302,
+
+    "tradeHistory30m": 883160,
+
+    "trade30mChangePercent": -22.743104307260293,
+
+    "sell30m": 402208,
+
+    "sellHistory30m": 506428,
+
+    "sell30mChangePercent": -20.579430837157503,
+
+    "buy30m": 280094,
+
+    "buyHistory30m": 376732,
+
+    "buy30mChangePercent": -25.651656880753425,
+
+    "v30m": 1041160.531349391,
+
+    "v30mUSD": 192563042.8167962,
+
+    "vHistory30m": 1424758.523452565,
+
+    "vHistory30mUSD": 263432974.7832449,
+
+    "v30mChangePercent": -26.923719759444932,
+
+    "vBuy30m": 525771.001339281,
+
+    "vBuy30mUSD": 97251183.41918801,
+
+    "vBuyHistory30m": 709160.8991117042,
+
+    "vBuyHistory30mUSD": 131127693.7657724,
+
+    "vBuy30mChangePercent": -25.86012539638573,
+
+    "vSell30m": 515389.53001011006,
+
+    "vSell30mUSD": 95311859.3976082,
+
+    "vSellHistory30m": 715597.6243408608,
+
+    "vSellHistory30mUSD": 132305281.0174725,
+
+    "vSell30mChangePercent": -27.97774720327824,
+
+    "trade1h": 1440761,
+
+    "tradeHistory1h": 1543682,
+
+    "trade1hChangePercent": -6.667241050941838,
+
+    "sell1h": 836278,
+
+    "sellHistory1h": 917354,
+
+    "sell1hChangePercent": -8.838027631644927,
+
+    "buy1h": 604483,
+
+    "buyHistory1h": 626328,
+
+    "buy1hChangePercent": -3.4877891456233794,
+
+    "v1h": 2254927.542143159,
+
+    "v1hUSD": 417066348.4330929,
+
+    "vHistory1h": 2431082.890461931,
+
+    "vHistory1hUSD": 449682477.7676815,
+
+    "v1hChangePercent": -7.245962242171864,
+
+    "vBuy1h": 1133344.2123917632,
+
+    "vBuy1hUSD": 209634917.8387837,
+
+    "vBuyHistory1h": 1207603.2215708497,
+
+    "vBuyHistory1hUSD": 223387353.05486172,
+
+    "vBuy1hChangePercent": -6.149288760797635,
+
+    "vSell1h": 1121583.3297513959,
+
+    "vSell1hUSD": 207431430.59430918,
+
+    "vSellHistory1h": 1223479.6688910814,
+
+    "vSellHistory1hUSD": 226295124.71281976,
+
+    "vSell1hChangePercent": -8.328404772924484,
+
+    "trade2h": 2862743,
+
+    "tradeHistory2h": 2734138,
+
+    "trade2hChangePercent": 4.70367625920857,
+
+    "sell2h": 1682750,
+
+    "sellHistory2h": 1515867,
+
+    "sell2hChangePercent": 11.009079292576459,
+
+    "buy2h": 1179993,
+
+    "buyHistory2h": 1218271,
+
+    "buy2hChangePercent": -3.1419938585093137,
+
+    "v2h": 4498066.17978427,
+
+    "v2hUSD": 831977083.1367832,
+
+    "vHistory2h": 4818408.644050122,
+
+    "vHistory2hUSD": 880956459.3704734,
+
+    "v2hChangePercent": -6.6483042002138655,
+
+    "vBuy2h": 2243808.0465117125,
+
+    "vBuy2hUSD": 415049688.12798595,
+
+    "vBuyHistory2h": 2429964.8866566755,
+
+    "vBuyHistory2hUSD": 444302522.4454551,
+
+    "vBuy2hChangePercent": -7.660886013916493,
+
+    "vSell2h": 2254258.133272558,
+
+    "vSell2hUSD": 416927395.0087973,
+
+    "vSellHistory2h": 2388443.7573934468,
+
+    "vSellHistory2hUSD": 436653936.9250183,
+
+    "vSell2hChangePercent": -5.618119484937257,
+
+    "trade4h": 5709984,
+
+    "tradeHistory4h": 6127682,
+
+    "trade4hChangePercent": -6.8165743587868945,
+
+    "sell4h": 3253806,
+
+    "sellHistory4h": 3353576,
+
+    "sell4hChangePercent": -2.9750332182720776,
+
+    "buy4h": 2456178,
+
+    "buyHistory4h": 2774106,
+
+    "buy4hChangePercent": -11.46055702269488,
+
+    "v4h": 9547061.355143117,
+
+    "v4hUSD": 1754529625.4136252,
+
+    "vHistory4h": 10428207.931597296,
+
+    "vHistory4hUSD": 1906430751.4204042,
+
+    "v4hChangePercent": -8.449645252894507,
+
+    "vBuy4h": 4786451.436341593,
+
+    "vBuy4hUSD": 879674769.6042875,
+
+    "vBuyHistory4h": 5171951.602876889,
+
+    "vBuyHistory4hUSD": 945585468.7842517,
+
+    "vBuy4hChangePercent": -7.453669255544885,
+
+    "vSell4h": 4760609.918801524,
+
+    "vSell4hUSD": 874854855.8093376,
+
+    "vSellHistory4h": 5256256.328720408,
+
+    "vSellHistory4hUSD": 960845282.6361525,
+
+    "vSell4hChangePercent": -9.429646861220425,
+
+    "trade8h": 11144235,
+
+    "tradeHistory8h": 11013604,
+
+    "trade8hChangePercent": 1.1860876784747298,
+
+    "sell8h": 6232518,
+
+    "sellHistory8h": 6153198,
+
+    "sell8hChangePercent": 1.289085772959037,
+
+    "buy8h": 4911717,
+
+    "buyHistory8h": 4860406,
+
+    "buy8hChangePercent": 1.05569370130808,
+
+    "v8h": 18712884.078270502,
+
+    "v8hUSD": 3430582244.777233,
+
+    "vHistory8h": 17149350.55459676,
+
+    "vHistory8hUSD": 3111090788.3309703,
+
+    "v8hChangePercent": 9.117158802580132,
+
+    "vBuy8h": 9323774.414230537,
+
+    "vBuy8hUSD": 1709439211.529329,
+
+    "vBuyHistory8h": 8470290.088989228,
+
+    "vBuyHistory8hUSD": 1536613109.0483108,
+
+    "vBuy8hChangePercent": 10.076211278180157,
+
+    "vSell8h": 9389109.664039968,
+
+    "vSell8hUSD": 1721143033.2479043,
+
+    "vSellHistory8h": 8679060.46560753,
+
+    "vSellHistory8hUSD": 1574477679.2826595,
+
+    "vSell8hChangePercent": 8.181175845543958,
+
+    "trade24h": 31567346,
+
+    "tradeHistory24h": 32424950,
+
+    "trade24hChangePercent": -2.644889197978717,
+
+    "sell24h": 17614443,
+
+    "sellHistory24h": 18171574,
+
+    "sell24hChangePercent": -3.065947947051807,
+
+    "buy24h": 13952903,
+
+    "buyHistory24h": 14253376,
+
+    "buy24hChangePercent": -2.1080830253828986,
+
+    "v24h": 52390882.652610525,
+
+    "v24hUSD": 9537454514.524822,
+
+    "vHistory24h": 53060724.64863746,
+
+    "vHistory24hUSD": 9633994545.717289,
+
+    "v24hChangePercent": -1.2624064229475878,
+
+    "vBuy24h": 25995649.913853772,
+
+    "vBuy24hUSD": 4732561596.32917,
+
+    "vBuyHistory24h": 26420975.749226637,
+
+    "vBuyHistory24hUSD": 4797352458.750371,
+
+    "vBuy24hChangePercent": -1.6098036628541805,
+
+    "vSell24h": 26395232.738756754,
+
+    "vSell24hUSD": 4804892918.195653,
+
+    "vSellHistory24h": 26639748.899410825,
+
+    "vSellHistory24hUSD": 4836642086.966919,
+
+    "vSell24hChangePercent": -0.9178621073995166,
+
+    "numberMarkets": 150744,
+
+    "isScaledUiToken": false,
+
+    "multiplier": null
+
+  }
+
+}
+```
+
+Updated 3 days ago
+
+* * *
+
+Did this page help you?
+
+Yes
+
+No

@@ -1,0 +1,156 @@
+| Time | Status | User Agent |  |
+| :-- | :-- | :-- | :-- |
+| Make a request to see history. |
+
+#### URL Expired
+
+The URL for this request expired after 30 days.
+
+- Starter
+- Premium
+- Business
+- Enterprise
+
+address
+
+string
+
+required
+
+The address of the token contract.
+
+x-chain
+
+string
+
+enum
+
+Defaults to solana
+
+Solana network only.
+
+solana
+
+Allowed:
+
+`solana`
+
+# `` 200      JSON object containing creation information of a token
+
+object
+
+success
+
+boolean
+
+required
+
+data
+
+object
+
+required
+
+txHash
+
+string
+
+slot
+
+integer
+
+tokenAddress
+
+string
+
+decimals
+
+integer
+
+owner
+
+string
+
+blockUnixTime
+
+integer
+
+blockHumanTime
+
+string
+
+# `` 400      Bad Request
+
+# `` 401      Unauthorized. API key is missing or invalid
+
+# `` 403      Forbidden. Request is blacklisted or not whitelisted
+
+# `` 429      Too Many Requests. Rate limit reached
+
+# `` 500      Internal Server Error
+
+Updated 24 days ago
+
+* * *
+
+Did this page help you?
+
+Yes
+
+No
+
+ShellPythonJavaScriptGo
+
+```
+
+xxxxxxxxxx
+
+curl --request GET \
+
+     --url https://public-api.birdeye.so/defi/token_creation_info \
+
+     --header 'accept: application/json' \
+
+     --header 'x-chain: solana'
+```
+
+```
+
+xxxxxxxxxx
+
+
+
+{
+
+  "success": true,
+
+  "data": {
+
+    "txHash": "3cW2HpkUs5Hg2FBMa52iJoSMUf8MNkkzkRcGuBs1JEesQ1pnsvNwCbTmZfeJf8hTi9NSHh1Tqx6Rz5Wrr7ePDEps",
+
+    "slot": 223012712,
+
+    "tokenAddress": "D7rcV8SPxbv94s3kJETkrfMrWqHFs6qrmtbiu6saaany",
+
+    "decimals": 5,
+
+    "owner": "JEFL3KwPQeughdrQAjLo9o75qh15nYbFJ2ZDrb695qsZ",
+
+    "blockUnixTime": 1697044029,
+
+    "blockHumanTime": "2023-10-11T17:07:09.000Z"
+
+  }
+
+}
+```
+
+Updated 24 days ago
+
+* * *
+
+Did this page help you?
+
+Yes
+
+No

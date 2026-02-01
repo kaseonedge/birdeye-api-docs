@@ -7,17 +7,11 @@
 
 address
 
-string
-
 required
 
 The address of the token contract.
 
 time\_frame
-
-string
-
-enum
 
 required
 
@@ -25,13 +19,7 @@ Defaults to 24h
 
 30m1h2h4h6h8h12h24h
 
-Show 8 enum values
-
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -41,15 +29,9 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 sort\_by
-
-string
-
-enum
 
 required
 
@@ -59,9 +41,7 @@ Specify the sort field.
 
 liquidityvolume24h
 
-Allowed:
-
-`liquidity``volume24h`
+`liquidity` `volume24h`
 
 offset
 
@@ -83,31 +63,19 @@ Number of items per page.
 
 x-chain
 
-string
-
-enum
-
 Defaults to solana
 
 A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing a list of markets of a token
-
-object
+# 200      JSON object containing a list of markets of a token
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -117,31 +85,27 @@ array of objects
 
 items
 
-object
-
 View Additional Properties
 
 total
 
 integer
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -150,11 +114,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -221,7 +185,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

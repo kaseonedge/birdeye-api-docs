@@ -25,25 +25,15 @@ Number of items per page.
 
 meme\_platform\_enabled
 
-boolean
-
-enum
-
 Defaults to false
 
 Enable to receive token new listing from meme platforms (eg: pump.fun). This filter only supports Solana.
 
 truefalse
 
-Allowed:
-
-`true``false`
+`true` `false`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -51,21 +41,13 @@ A chain name listed in supported networks except Sui.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantle
 
-Show 14 enum values
-
-# `` 200      JSON object containing a list of newly listed tokens
-
-object
+# 200      JSON object containing a list of newly listed tokens
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -75,53 +57,35 @@ array of objects
 
 items
 
-object
-
 address
-
-string
 
 symbol
 
-string
-
 name
-
-string
 
 source
 
-string
-
 liquidityAddedAt
-
-string
 
 logoURI
 
-string
-
 liquidity
 
-number
+# 400      Bad Request
 
-# `` 400      Bad Request
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 429      Too Many Requests. Rate limit reached
 
-# `` 429      Too Many Requests. Rate limit reached
-
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -130,11 +94,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -189,8 +153,6 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 
 StripeM-Inner

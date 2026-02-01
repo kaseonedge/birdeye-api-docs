@@ -6,13 +6,9 @@
 
 list\_timeframe
 
-string
-
 A list of time frames seprated by comma (,). List of supported time frames: 1m, 5m, 30m, 1h, 2h, 4h, 8h, 24h, 2d, 3d, 7d
 
 address
-
-string
 
 required
 
@@ -20,25 +16,15 @@ The address of the token contract.
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to raw
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaledboth
 
-Allowed:
-
-`raw``scaled``both`
+`raw` `scaled` `both`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -46,15 +32,9 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing list of price stats of tokens
-
-object
+# 200      JSON object containing list of price stats of tokens
 
 success
-
-boolean
 
 required
 
@@ -70,11 +50,7 @@ Array of token data with price information for multiple timeframes
 
 data\*
 
-object
-
 address
-
-string
 
 required
 
@@ -82,11 +58,7 @@ The address of the token contract.
 
 is\_scaled\_ui\_token
 
-boolean
-
 multiplier
-
-number
 
 Multiplier used to scale the token price
 
@@ -100,8 +72,6 @@ Price data for a timeframe
 
 data\*
 
-object
-
 unix\_time\_update\_price
 
 integer
@@ -112,15 +82,11 @@ Unix timestamp of when the data was updated
 
 time\_frame
 
-string
-
 required
 
 Time period for the data (e.g., '24h', '2d', '3d')
 
 price
-
-number
 
 required
 
@@ -128,15 +94,11 @@ Current token price
 
 price\_change\_percent
 
-number
-
 required
 
 Percentage change in price over the specified timeframe
 
 high
-
-number
 
 required
 
@@ -144,47 +106,37 @@ Highest price during the timeframe
 
 low
 
-number
-
 required
 
 Lowest price during the timeframe
 
 scaled\_price
 
-number
-
 Current token scaled price
 
 scaled\_high
-
-number
 
 Highest scaled price during the timeframe
 
 scaled\_low
 
-number
-
 Lowest scaled price during the timeframe
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -193,11 +145,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -252,7 +204,5 @@ xxxxxxxxxx
   "success": true
 
 }
-```
-
-* * *
+` `
 

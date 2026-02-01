@@ -6,27 +6,15 @@
 
 chain
 
-string
-
-enum
-
 Defaults to all
 
 Specify the chain.
 
 allsolanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 16 enum values
-
 keyword
 
-string
-
 target
-
-string
-
-enum
 
 Defaults to all
 
@@ -34,15 +22,9 @@ An option to search tokens based on their expected results as token, market, or 
 
 alltokenmarket
 
-Allowed:
-
-`all``token``market`
+`all` `token` `market`
 
 search\_mode
-
-string
-
-enum
 
 Defaults to exact
 
@@ -50,15 +32,9 @@ An option to search tokens with exact match or partially match.
 
 exactfuzzy
 
-Allowed:
-
-`exact``fuzzy`
+`exact` `fuzzy`
 
 search\_by
-
-string
-
-enum
 
 Defaults to symbol
 
@@ -66,15 +42,9 @@ An option to search tokens by symbol, name, or both.
 
 combinationaddressnamesymbol
 
-Allowed:
-
-`combination``address``name``symbol`
+`combination` `address` `name` `symbol`
 
 sort\_by
-
-string
-
-enum
 
 required
 
@@ -84,13 +54,7 @@ Specify the sort field.
 
 fdvmarketcapliquiditypriceprice\_change\_24h\_percenttrade\_24htrade\_24h\_change\_percentbuy\_24hbuy\_24h\_change\_percentsell\_24hsell\_24h\_change\_percentunique\_wallet\_24hunique\_view\_24h\_change\_percentlast\_trade\_unix\_timevolume\_24h\_usdvolume\_24h\_change\_percent
 
-Show 16 enum values
-
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -100,27 +64,17 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 verify\_token
-
-boolean
-
-enum
 
 A filter to retrieve tokens based on their verification status (supported on Solana).
 
 truetruefalse
 
-Allowed:
-
-`true``false`
+`true` `false`
 
 markets
-
-string
 
 A comma-separated list of market sources to filter results (supported on Solana). Available options: \['Raydium', 'Raydium CP', 'Raydium Clamm', 'Meteora', 'Meteora DLMM', 'Fluxbeam', 'Pump.fun', 'OpenBook', 'OpenBook V2', 'Orca'\].
 
@@ -144,33 +98,21 @@ Number of items per page.
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to scaled
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaled
 
-Allowed:
+`raw` `scaled`
 
-`raw``scaled`
-
-# `` 200      Search for token and market data matching keyword, tokenAddress using full-text search
-
-object
+# 200      Search for token and market data matching keyword, tokenAddress using full-text search
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -182,11 +124,7 @@ required
 
 items\*
 
-object
-
 type
-
-string
 
 required
 
@@ -198,40 +136,34 @@ required
 
 result\*
 
-object
+# 400      Bad Request
 
-object
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 400      Bad Request
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 429      Too Many Requests. Rate limit reached
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
-
-# `` 429      Too Many Requests. Rate limit reached
-
-# `` 500      Internal Server Error
+# 500      Internal Server Error
 
 Updated 2 months ago
 
-* * *
-
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
      --url 'https://public-api.birdeye.so/defi/v3/search?chain=all&target=all&search_mode=exact&search_by=symbol&sort_by=volume_24h_usd&sort_type=desc&offset=0&limit=20&ui_amount_mode=scaled' \
 
      --header 'accept: application/json'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -322,9 +254,7 @@ xxxxxxxxxx
   }
 
 }
-```
+` `
 
 Updated 2 months ago
-
-* * *
 

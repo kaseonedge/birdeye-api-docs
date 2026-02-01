@@ -17,19 +17,13 @@ integer
 
 Specify the end time using unix timestamps in seconds
 
-# `` 200      JSON object containing the credits usage
-
-object
+# 200      JSON object containing the credits usage
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -47,60 +41,50 @@ required
 
 usage
 
-object
-
 required
 
 usage object
 
 remaining
 
-object
-
 remaining object
 
 overage\_usage
-
-object
 
 overage\_usage object
 
 overage\_cost
 
-object
-
 overage\_cost object
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
+# 500      Internal Server Error
 
 Updated 2 months ago
 
-* * *
-
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
      --url https://public-api.birdeye.so/utils/v1/credits \
 
      --header 'accept: application/json'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -155,9 +139,7 @@ xxxxxxxxxx
   "success": true
 
 }
-```
+` `
 
 Updated 2 months ago
-
-* * *
 

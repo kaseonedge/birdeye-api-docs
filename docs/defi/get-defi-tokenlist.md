@@ -5,19 +5,6 @@
 - Business
 - Enterprise
 
-Ideas 💡
-
-- Returns a comprehensive list of supported tokens with metadata.
-- Useful as a **token registry** for symbol, name, logo URI, and decimal info.
-- Ideal for auto-complete search bars, dropdown selectors, or asset explorers.
-- Can be cached for improving performance across token-based interfaces.
-
-sort\_by
-
-string
-
-enum
-
 required
 
 Defaults to v24hUSD
@@ -26,15 +13,9 @@ Specify the sort field.
 
 mcv24hUSDv24hChangePercentliquidity
 
-Allowed:
-
-`mc``v24hUSD``v24hChangePercent``liquidity`
+`mc` `v24hUSD` `v24hChangePercent` `liquidity`
 
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -44,9 +25,7 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 offset
 
@@ -68,8 +47,6 @@ Number of items per page.
 
 min\_liquidity
 
-number
-
 ≥ 0
 
 Defaults to 100
@@ -78,15 +55,9 @@ Specify the lower bound of liquidity. Filter for records with liquidity greater 
 
 max\_liquidity
 
-number
-
 Specify the upper bound of liquidity. Filter for records with liquidity less than the maximum liquidity value, excluding those with liquidity equal to the maximum.
 
 ui\_amount\_mode
-
-string
-
-enum
 
 Defaults to scaled
 
@@ -94,15 +65,9 @@ Indicate whether to use the scaled amount for scaled ui amount tokens. Only supp
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -110,21 +75,13 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing a list of tokens with certain fields
-
-object
+# 200      JSON object containing a list of tokens with certain fields
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -134,11 +91,7 @@ integer
 
 updateTime
 
-string
-
 total
-
-number
 
 tokens
 
@@ -146,11 +99,7 @@ array of objects
 
 tokens
 
-object
-
 address
-
-string
 
 decimals
 
@@ -162,49 +111,33 @@ integer
 
 liquidity
 
-number
-
 logoURI
-
-string
 
 mc
 
-number
-
 name
-
-string
 
 symbol
 
-string
-
 v24hChangePercent
-
-number
 
 v24hUSD
 
-number
+# 400      Bad Request
 
-# `` 400      Bad Request
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 429      Too Many Requests. Rate limit reached
 
-# `` 429      Too Many Requests. Rate limit reached
-
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -213,11 +146,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -268,7 +201,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

@@ -4,19 +4,6 @@
 - Business
 - Enterprise
 
-Ideas 💡
-
-- Great for ranking tokens by trading activity and popularity.
-- Helps detect high-performing or high-interest tokens.
-- Use to analyze token traction over time, especially for DeFi token analytics.
-- Ideal for token dashboards, analytics tools, and alert systems.
-
-time\_frame
-
-string
-
-enum
-
 required
 
 Defaults to 24h
@@ -25,11 +12,7 @@ Time interval (Example: '24h')
 
 1m5m30m1h2h4h8h24h3d7d14d30d90d180d1yalltime
 
-Show 16 enum values
-
 address
-
-string
 
 required
 
@@ -37,25 +20,15 @@ The address of the token contract.
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to raw
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaledboth
 
-Allowed:
-
-`raw``scaled``both`
+`raw` `scaled` `both`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -63,11 +36,7 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      OK
-
-object
+# 200      OK
 
 data
 
@@ -75,69 +44,43 @@ array of objects
 
 data
 
-object
-
 address
-
-string
 
 total\_volume
 
-number
-
 total\_volume\_usd
-
-number
 
 volume\_buy\_usd
 
-number
-
 volume\_sell\_usd
-
-number
 
 volume\_buy
 
-number
-
 volume\_sell
-
-number
 
 total\_trade
 
-number
-
 buy
-
-number
 
 sell
 
-number
-
 success
 
-boolean
+# 400      Bad Request
 
-# `` 400      Bad Request
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 429      Too Many Requests. Rate limit reached
 
-# `` 429      Too Many Requests. Rate limit reached
-
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -146,11 +89,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -185,7 +128,5 @@ xxxxxxxxxx
   "success": true
 
 }
-```
-
-* * *
+` `
 

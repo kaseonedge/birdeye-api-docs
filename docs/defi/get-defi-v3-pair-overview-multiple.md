@@ -1,26 +1,11 @@
 
 - Enterprise
 
-Ideas 💡
-
-- Fetches overview data for **multiple V3 pools** in one call — efficient for dashboards.
-- Ideal for comparing liquidity, volume, and fee APR across pools.
-- Great for pool discovery tools, yield optimizers, and liquidity analytics.
-- Useful for surfacing trending or high-performing V3 pools on concentrated liquidity AMMs.
-
-list\_address
-
-string
-
 required
 
 A list of pair contract addresses in string separated by commas (,)
 
 ui\_amount\_mode
-
-string
-
-enum
 
 Defaults to scaled
 
@@ -28,15 +13,9 @@ Indicate whether to use the scaled amount for scaled ui amount tokens. Only supp
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -44,43 +23,33 @@ SVM networks only.
 
 solanafogo
 
-Allowed:
+`solana` `fogo`
 
-`solana``fogo`
-
-# `` 200      JSON object containing overview of multiple markets
-
-object
+# 200      JSON object containing overview of multiple markets
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -89,11 +58,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -326,7 +295,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

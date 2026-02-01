@@ -7,10 +7,6 @@
 
 type
 
-string
-
-enum
-
 required
 
 Defaults to 1W
@@ -19,15 +15,9 @@ Specify the type of top gainers/losers. Filter for records with type equal to th
 
 yesterdaytoday1W
 
-Allowed:
-
-`yesterday``today``1W`
+`yesterday` `today` `1W`
 
 sort\_by
-
-string
-
-enum
 
 required
 
@@ -37,15 +27,9 @@ Specify the sort field.
 
 PnL
 
-Allowed:
-
 `PnL`
 
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -55,9 +39,7 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 offset
 
@@ -81,31 +63,19 @@ Number of items per page.
 
 x-chain
 
-string
-
-enum
-
 Defaults to solana
 
 A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing a list of top gainer loser traders
-
-object
+# 200      JSON object containing a list of top gainer loser traders
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -115,45 +85,33 @@ array of objects
 
 items
 
-object
-
 network
-
-string
 
 address
 
-string
-
 pnl
 
-number
-
 volume
-
-number
 
 trade\_count
 
 integer
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -162,11 +120,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -209,7 +167,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

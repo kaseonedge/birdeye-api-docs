@@ -8,17 +8,11 @@
 
 token\_address
 
-string
-
 required
 
 The address of the token contract.
 
 volume\_type
-
-string
-
-enum
 
 required
 
@@ -26,65 +20,39 @@ Volume type value to be filtered
 
 usdamount
 
-Allowed:
-
-`usd``amount`
+`usd` `amount`
 
 min\_volume
-
-number
 
 Minimum volume value, support up to 3 decimals
 
 max\_volume
 
-number
-
 Maximum volume value, support up to 3 decimals
 
 sort\_by
-
-string
-
-enum
 
 Defaults to block\_unix\_time
 
 block\_unix\_timeblock\_number
 
-Allowed:
-
-`block_unix_time``block_number`
+`block_unix_time` `block_number`
 
 tx\_type
-
-string
-
-enum
 
 Defaults to swap
 
 swapbuyselladdremoveall
 
-Allowed:
-
-`swap``buy``sell``add``remove``all`
+`swap` `buy` `sell` `add` `remove` `all`
 
 source
-
-string
-
-enum
 
 Source of the liquidity (AMMs). Only support solana.
 
 raydiumraydiumraydium\_clammraydium\_cporcalifinityfluxbeamsaberphoenixbonkswappump\_dot\_funmeteora\_dlmm
 
-Show 11 enum values
-
 owner
-
-string
 
 The address of the wallet.
 
@@ -106,25 +74,15 @@ Specify the time seeked after using unix timestamps in seconds
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to scaled
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -134,9 +92,7 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 offset
 
@@ -160,33 +116,21 @@ Number of items per page.
 
 x-chain
 
-string
-
-enum
-
 Defaults to solana
 
 Solana network only.
 
 solana
 
-Allowed:
-
 `solana`
 
-# `` 200      JSON object containing transactions of a token
-
-object
+# 200      JSON object containing transactions of a token
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -198,33 +142,27 @@ required
 
 items\*
 
-object
-
 View Additional Properties
 
 hasNext
 
-boolean
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -233,11 +171,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -328,7 +266,5 @@ xxxxxxxxxx
   "success": true
 
 }
-```
-
-* * *
+` `
 

@@ -6,9 +6,9 @@ The instructions for each type of objects are described below.
 
 ## WebSocket URL:   [Skip link to WebSocket URL:](https://docs.birdeye.so/reference/new-pair\#websocket-url)
 
-```undefined
+` `undefined
 wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
-```
+` `
 
 ### Header   [Skip link to Header](https://docs.birdeye.so/reference/new-pair\#header)
 
@@ -22,23 +22,23 @@ wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_NEW_PAIR"
 }
-```
+` `
 
 Or:
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_NEW_PAIR",
      "min_liquidity": 100,
      "max_liquidity" : 50000
 }
-```
+` `
 
 **Key Notes:**
 
@@ -49,7 +49,7 @@ JSON
 
 JSON
 
-```json
+` `json
 {
     "type": "NEW_PAIR_DATA",
     "data": {
@@ -72,7 +72,7 @@ JSON
         "blockTime": 1720156781
     }
 }
-```
+` `
 
 **Response Parameters:**
 
@@ -95,9 +95,5 @@ JSON
 | `data.quote.decimals` | integer | The number of decimal places for the quote token. | 9 |
 | `data.txHash` | string | The transaction hash for the creation of the trading pair. | "3CzXpuUJV9KryVDMN5nFAqH87TfueWG6sUiksbf3Akh9eqGNJW1CJtYbrELJixXC77Dyutz8CfT3eP1uJ3LP3iy5" |
 | `data.blockTime` | integer | The Unix timestamp when the trading pair was created. | 1720156781 |
-
-* * *
-
-* * *
 
 StripeM-Inner

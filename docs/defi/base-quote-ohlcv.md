@@ -8,9 +8,9 @@ Check out this Github file for an example:
 
 ## 1\. WebSocket URL:   [Skip link to 1. WebSocket URL:](https://docs.birdeye.so/reference/base-quote-ohlcv\#1-websocket-url)
 
-```undefined
+` `undefined
 wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
-```
+` `
 
 ### Header   [Skip link to Header](https://docs.birdeye.so/reference/base-quote-ohlcv\#header)
 
@@ -28,7 +28,7 @@ To receive real-time updates about price changes for a specific token pair in th
 
 JSON
 
-```json
+` `json
 {
   "type": "SUBSCRIBE_BASE_QUOTE_PRICE",
   "data": {
@@ -37,13 +37,13 @@ JSON
     "chartType": "1m"
   }
 }
-```
+` `
 
 ### Sample response   [Skip link to Sample response](https://docs.birdeye.so/reference/base-quote-ohlcv\#sample-response)
 
 JSON
 
-```json
+` `json
 {
   "type": "BASE_QUOTE_PRICE_DATA",
   "data": {
@@ -59,7 +59,7 @@ JSON
     "quoteAddress": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
   }
 }
-```
+` `
 
 ### Implementation Example in JavaScript   [Skip link to Implementation Example in JavaScript](https://docs.birdeye.so/reference/base-quote-ohlcv\#implementation-example-in-javascript)
 
@@ -67,9 +67,9 @@ Use the above github js code and run
 
 bash
 
-```shell
+` `shell
 node ws-base-quote.js solana So11111111111111111111111111111111111111112 EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v 1m
-```
+` `
 
 **Explanation:**
 
@@ -82,8 +82,4 @@ node ws-base-quote.js solana So11111111111111111111111111111111111111112 EPjFWdd
 
 - This example subscribes to real-time price updates for a token pair and logs the Open, High, Low, Close, and Volume data to the console. The subscription is automatically closed after 1 hour.
 - This WebSocket only support 1 base-quote pair for 1 connection. You need to open another connection for new base-quote subscription.
-
-* * *
-
-* * *
 

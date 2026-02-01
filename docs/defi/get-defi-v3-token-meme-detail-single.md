@@ -11,8 +11,6 @@
 
 address
 
-string
-
 required
 
 Defaults to HHuLN58RAJoyNxwYte8NdEyV7dhQzDCLXDmTraHspump
@@ -21,53 +19,39 @@ Address of a meme token
 
 x-chain
 
-string
-
-enum
-
 Defaults to solana
 
 Meme networks support.
 
 solanabscmonad
 
-Allowed:
+`solana` `bsc` `monad`
 
-`solana``bsc``monad`
-
-# `` 200      OK
-
-object
+# 200      OK
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -76,11 +60,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -185,7 +169,5 @@ xxxxxxxxxx
   "success": true
 
 }
-```
-
-* * *
+` `
 

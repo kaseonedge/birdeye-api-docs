@@ -4,17 +4,6 @@
 - Business
 - Enterprise
 
-Ideas 💡
-
-- Returns historical USD prices for a token at **multiple timestamps** in one request.
-- Perfect for portfolio time series reconstruction or backtesting strategies.
-- Great for generating custom charts, price annotations, and historical comparisons.
-- Efficient alternative to multiple single `/history_price` calls — ideal for bulk queries.
-
-address
-
-string
-
 required
 
 The address of the token contract.
@@ -27,25 +16,15 @@ integer
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to raw
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaledboth
 
-Allowed:
-
-`raw``scaled``both`
+`raw` `scaled` `both`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -53,31 +32,27 @@ Solana network only.
 
 solana
 
-Allowed:
-
 `solana`
 
-# `` 200      JSON object containing list of a token's transactions
+# 200      JSON object containing list of a token's transactions
 
 json
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -86,11 +61,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -109,7 +84,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

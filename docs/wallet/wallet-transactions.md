@@ -6,9 +6,9 @@ The instructions for each type of objects are described below.
 
 ## WebSocket URL:   [Skip link to WebSocket URL:](https://docs.birdeye.so/reference/wallet-transactions\#websocket-url)
 
-```undefined
+` `undefined
 wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
-```
+` `
 
 ### Header   [Skip link to Header](https://docs.birdeye.so/reference/wallet-transactions\#header)
 
@@ -24,14 +24,14 @@ wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_WALLET_TXS",
     "data": {
         "address": "0xae2Fc483527B8EF99EB5D9B44875F005ba1FaE13"
     }
 }
-```
+` `
 
 For EVM addresses (Ethereum, BSC, etc.), the address can be provided in any format (checksum, lowercase, uppercase).
 
@@ -41,17 +41,17 @@ For Solana, a valid address is required (e.g., 9SeRj4LjgENeKQujfxRNkGbXYPM3X2vr9
 
 JSON
 
-```json
+` `json
 {
   "type": "UNSUBSCRIBE_WALLET_TXS"
 }
-```
+` `
 
 ### Output Example   [Skip link to Output Example](https://docs.birdeye.so/reference/wallet-transactions\#output-example)
 
 JSON
 
-```json
+` `json
 {
     "type": "WALLET_TXS_DATA",
     "data": {
@@ -77,7 +77,7 @@ JSON
         }
     }
 }
-```
+` `
 
 **Response Parameters:**
 
@@ -102,8 +102,4 @@ JSON
 - For Solana, the address must be provided in the correct format.
 
 **Sample code** [https://github.com/TheNang2710/bds-public/blob/main/ws-wallet.js](https://github.com/TheNang2710/bds-public/blob/main/ws-wallet.js)
-
-* * *
-
-* * *
 

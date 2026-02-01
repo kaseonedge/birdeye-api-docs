@@ -4,17 +4,6 @@
 - Business
 - Enterprise
 
-Ideas 💡
-
-- Fetch historical token trades starting from a specific timestamp.
-- Perfect for syncing trade data into your database or analytics tools.
-- Enables building time-based trade charts or volume trend analysis.
-- Combine with real-time txs endpoint to create full trade timelines.
-
-address
-
-string
-
 required
 
 The address of the token contract.
@@ -41,17 +30,11 @@ Number of items per page.
 
 tx\_type
 
-string
-
-enum
-
 Defaults to swap
 
 swapaddremoveall
 
-Allowed:
-
-`swap``add``remove``all`
+`swap` `add` `remove` `all`
 
 before\_time
 
@@ -71,25 +54,15 @@ Specify the time seeked after using unix timestamps in seconds
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to scaled
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -97,21 +70,13 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing transactions of a token
-
-object
+# 200      JSON object containing transactions of a token
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -123,33 +88,27 @@ required
 
 items\*
 
-object
-
 View Additional Properties
 
 hasNext
 
-boolean
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -158,11 +117,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -303,7 +262,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

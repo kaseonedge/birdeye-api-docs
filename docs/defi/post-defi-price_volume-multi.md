@@ -2,32 +2,15 @@
 - Business
 - Enterprise
 
-Ideas 💡
-
-- Fetches real-time price and 24h volume for multiple tokens in one request.
-- Perfect for building leaderboards, token comparison tools, or watchlists.
-- Reduces API call overhead compared to calling `/price_volume-single` repeatedly.
-- Ideal for DeFi dashboards and apps displaying token market snapshots at scale.
-
-ui\_amount\_mode
-
-string
-
-enum
-
 Defaults to raw
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaledboth
 
-Allowed:
-
-`raw``scaled``both`
+`raw` `scaled` `both`
 
 list\_address
-
-string
 
 required
 
@@ -35,23 +18,13 @@ Defaults to So11111111111111111111111111111111111111112,DezXAZ8z7PnrnRJjz3wXBoRg
 
 type
 
-string
-
-enum
-
 Defaults to 24h
 
 1h2h4h8h24h
 
-Allowed:
-
-`1h``2h``4h``8h``24h`
+`1h` `2h` `4h` `8h` `24h`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -59,21 +32,13 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing price and volume with changes data of multiple tokens
-
-object
+# 200      JSON object containing price and volume with changes data of multiple tokens
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -81,23 +46,21 @@ A hashmap with token addresses as keys and the price volume object as value
 
 View Additional Properties
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request POST \
 
@@ -120,11 +83,11 @@ curl --request POST \
 }
 
 '
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -171,7 +134,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

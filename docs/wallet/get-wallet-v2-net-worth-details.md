@@ -12,37 +12,23 @@
 
 wallet
 
-string
-
 required
 
 The wallet of the account.
 
 time
 
-string
-
 Time get net worth. Default is current time.
 
 type
-
-string
-
-enum
 
 Defaults to 1d
 
 1h1d
 
-Allowed:
-
-`1h``1d`
+`1h` `1d`
 
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -52,9 +38,7 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 limit
 
@@ -76,53 +60,39 @@ Make sure offset <= 10000
 
 x-chain
 
-string
-
-enum
-
 Defaults to solana
 
 Solana network only.
 
 solana
 
-Allowed:
-
 `solana`
 
-# `` 200      JSON object containing list assets of an address at a specific time
-
-object
+# 200      JSON object containing list assets of an address at a specific time
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -131,11 +101,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -202,7 +172,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

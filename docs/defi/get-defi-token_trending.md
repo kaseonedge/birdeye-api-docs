@@ -7,10 +7,6 @@
 
 sort\_by
 
-string
-
-enum
-
 required
 
 Defaults to rank
@@ -19,15 +15,9 @@ Specify the sort field.
 
 rankvolumeUSDliquidity
 
-Allowed:
-
-`rank``volumeUSD``liquidity`
+`rank` `volumeUSD` `liquidity`
 
 interval
-
-string
-
-enum
 
 Defaults to 24h
 
@@ -35,15 +25,9 @@ Specify the interval of trending.
 
 1h4h24h
 
-Allowed:
-
-`1h``4h``24h`
+`1h` `4h` `24h`
 
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -53,9 +37,7 @@ Specify the sort order.
 
 ascdesc
 
-Allowed:
-
-`asc``desc`
+`asc` `desc`
 
 offset
 
@@ -77,25 +59,15 @@ Number of items per page.
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to scaled
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -103,21 +75,13 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing a list of trending tokens
-
-object
+# 200      JSON object containing a list of trending tokens
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -127,11 +91,7 @@ integer
 
 updateTime
 
-string
-
 total
-
-number
 
 tokens
 
@@ -139,11 +99,7 @@ array of objects
 
 tokens
 
-object
-
 address
-
-string
 
 decimals
 
@@ -151,27 +107,15 @@ integer
 
 liquidity
 
-number
-
 logoURI
-
-string
 
 name
 
-string
-
 symbol
-
-string
 
 volume24hUSD
 
-number
-
 volume24hChangePercent
-
-number
 
 rank
 
@@ -179,37 +123,27 @@ integer
 
 price
 
-number
-
 price24hChangePercent
-
-number
 
 fdv
 
-number
-
 marketcap
 
-number
+# 400      Bad Request
 
-# `` 400      Bad Request
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 429      Too Many Requests. Rate limit reached
 
-# `` 429      Too Many Requests. Rate limit reached
-
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -218,11 +152,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -303,8 +237,6 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 
 StripeM-Inner

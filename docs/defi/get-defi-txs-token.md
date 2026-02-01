@@ -5,17 +5,6 @@
 - Useful for transaction visualizations, price tracking, or DEX analytics.
 - High-frequency tokens may produce many transactions per second, so plan API usage accordingly.
 
-Ideas 💡
-
-- View the latest on-chain trades for a specific token.
-- Great for tracking whale activity, token movements, or suspicious patterns.
-- Use in dashboards to show recent token trade activity in real time.
-- Combine with token price and liquidity data for deeper market insights.
-
-address
-
-string
-
 required
 
 The address of the token contract.
@@ -42,23 +31,13 @@ Number of items per page.
 
 tx\_type
 
-string
-
-enum
-
 Defaults to swap
 
 swapaddremoveall
 
-Allowed:
-
-`swap``add``remove``all`
+`swap` `add` `remove` `all`
 
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -68,15 +47,9 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 ui\_amount\_mode
-
-string
-
-enum
 
 Defaults to scaled
 
@@ -84,15 +57,9 @@ Indicate whether to use the scaled amount for scaled ui amount tokens. Only supp
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -100,21 +67,13 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing transactions of a token
-
-object
+# 200      JSON object containing transactions of a token
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -126,33 +85,27 @@ required
 
 items\*
 
-object
-
 View Additional Properties
 
 hasNext
 
-boolean
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -161,11 +114,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -314,7 +267,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

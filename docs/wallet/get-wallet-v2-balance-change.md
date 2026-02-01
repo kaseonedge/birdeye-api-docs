@@ -7,15 +7,11 @@
 
 address
 
-string
-
 required
 
 The address of the account.
 
 token\_address
-
-string
 
 The address of the token contract.
 
@@ -37,27 +33,15 @@ Specify the end time using unix timestamps in seconds
 
 type
 
-string
-
-enum
-
 SOLSPL
 
-Allowed:
-
-`SOL``SPL`
+`SOL` `SPL`
 
 change\_type
 
-string
-
-enum
-
 increasedecrease
 
-Allowed:
-
-`increase``decrease`
+`increase` `decrease`
 
 offset
 
@@ -79,25 +63,15 @@ Defaults to 20
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to scaled
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -105,43 +79,33 @@ Solana network only.
 
 solana
 
-Allowed:
-
 `solana`
 
-# `` 200      JSON object containing a list of balance changes of an address
-
-object
+# 200      JSON object containing a list of balance changes of an address
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -150,11 +114,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -217,7 +181,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

@@ -9,15 +9,11 @@
 
 address
 
-string
-
 required
 
 The address of the token contract.
 
 frames
-
-string
 
 A list of custom time intervals separated by comma (,). Users can pass up to 8 intervals.
 Rules:
@@ -28,25 +24,15 @@ Rules:
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to scaled
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -54,1139 +40,763 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing trade data of a specific token
-
-object
+# 200      JSON object containing trade data of a specific token
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
 address
-
-string
 
 required
 
 liquidity
 
-number
-
 required
 
 last\_trade\_unix\_time
-
-number
 
 required
 
 last\_trade\_human\_time
 
-string
-
 required
 
 price
-
-number
 
 required
 
 history\_30m\_price
 
-number
-
 required
 
 price\_change\_30m\_percent
-
-number
 
 required
 
 history\_1h\_price
 
-number
-
 required
 
 price\_change\_1h\_percent
-
-number
 
 required
 
 history\_2h\_price
 
-number
-
 required
 
 price\_change\_2h\_percent
-
-number
 
 required
 
 history\_4h\_price
 
-number
-
 required
 
 price\_change\_4h\_percent
-
-number
 
 required
 
 history\_6h\_price
 
-number
-
 required
 
 price\_change\_6h\_percent
-
-number
 
 required
 
 history\_8h\_price
 
-number
-
 required
 
 price\_change\_8h\_percent
-
-number
 
 required
 
 history\_12h\_price
 
-number
-
 required
 
 price\_change\_12h\_percent
-
-number
 
 required
 
 history\_24h\_price
 
-number
-
 required
 
 price\_change\_24h\_percent
-
-number
 
 required
 
 unique\_wallet\_30m
 
-number
-
 required
 
 unique\_wallet\_history\_30m
-
-number
 
 required
 
 unique\_wallet\_30m\_change\_percent
 
-number
-
 required
 
 unique\_wallet\_1h
-
-number
 
 required
 
 unique\_wallet\_history\_1h
 
-number
-
 required
 
 unique\_wallet\_1h\_change\_percent
-
-number
 
 required
 
 unique\_wallet\_2h
 
-number
-
 required
 
 unique\_wallet\_history\_2h
-
-number
 
 required
 
 unique\_wallet\_2h\_change\_percent
 
-number
-
 required
 
 unique\_wallet\_4h
-
-number
 
 required
 
 unique\_wallet\_history\_4h
 
-number
-
 required
 
 unique\_wallet\_4h\_change\_percent
-
-number
 
 required
 
 unique\_wallet\_8h
 
-number
-
 required
 
 unique\_wallet\_history\_8h
-
-number
 
 required
 
 unique\_wallet\_8h\_change\_percent
 
-number
-
 required
 
 unique\_wallet\_24h
-
-number
 
 required
 
 unique\_wallet\_history\_24h
 
-number
-
 required
 
 unique\_wallet\_24h\_change\_percent
-
-number
 
 required
 
 trade\_30m
 
-number
-
 required
 
 trade\_history\_30m
-
-number
 
 required
 
 trade\_30m\_change\_percent
 
-number
-
 required
 
 sell\_30m
-
-number
 
 required
 
 sell\_history\_30m
 
-number
-
 required
 
 sell\_30m\_change\_percent
-
-number
 
 required
 
 buy\_30m
 
-number
-
 required
 
 buy\_history\_30m
-
-number
 
 required
 
 buy\_30m\_change\_percent
 
-number
-
 required
 
 volume\_30m
-
-number
 
 required
 
 volume\_30m\_usd
 
-number
-
 required
 
 volume\_history\_30m
-
-number
 
 required
 
 volume\_history\_30m\_usd
 
-number
-
 required
 
 volume\_30m\_change\_percent
-
-number
 
 required
 
 volume\_buy\_30m
 
-number
-
 required
 
 volume\_buy\_30m\_usd
-
-number
 
 required
 
 volume\_buy\_history\_30m
 
-number
-
 required
 
 volume\_buy\_history\_30m\_usd
-
-number
 
 required
 
 volume\_buy\_30m\_change\_percent
 
-number
-
 required
 
 volume\_sell\_30m
-
-number
 
 required
 
 volume\_sell\_30m\_usd
 
-number
-
 required
 
 volume\_sell\_history\_30m
-
-number
 
 required
 
 volume\_sell\_history\_30m\_usd
 
-number
-
 required
 
 volume\_sell\_30m\_change\_percent
-
-number
 
 required
 
 trade\_1h
 
-number
-
 required
 
 trade\_history\_1h
-
-number
 
 required
 
 trade\_1h\_change\_percent
 
-number
-
 required
 
 sell\_1h
-
-number
 
 required
 
 sell\_history\_1h
 
-number
-
 required
 
 sell\_1h\_change\_percent
-
-number
 
 required
 
 buy\_1h
 
-number
-
 required
 
 buy\_history\_1h
-
-number
 
 required
 
 buy\_1h\_change\_percent
 
-number
-
 required
 
 volume\_1h
-
-number
 
 required
 
 volume\_1h\_usd
 
-number
-
 required
 
 volume\_history\_1h
-
-number
 
 required
 
 volume\_history\_1h\_usd
 
-number
-
 required
 
 volume\_1h\_change\_percent
-
-number
 
 required
 
 volume\_buy\_1h
 
-number
-
 required
 
 volume\_buy\_1h\_usd
-
-number
 
 required
 
 volume\_buy\_history\_1h
 
-number
-
 required
 
 volume\_buy\_history\_1h\_usd
-
-number
 
 required
 
 volume\_buy\_1h\_change\_percent
 
-number
-
 required
 
 volume\_sell\_1h
-
-number
 
 required
 
 volume\_sell\_1h\_usd
 
-number
-
 required
 
 volume\_sell\_history\_1h
-
-number
 
 required
 
 volume\_sell\_history\_1h\_usd
 
-number
-
 required
 
 volume\_sell\_1h\_change\_percent
-
-number
 
 required
 
 trade\_2h
 
-number
-
 required
 
 trade\_history\_2h
-
-number
 
 required
 
 trade\_2h\_change\_percent
 
-number
-
 required
 
 sell\_2h
-
-number
 
 required
 
 sell\_history\_2h
 
-number
-
 required
 
 sell\_2h\_change\_percent
-
-number
 
 required
 
 buy\_2h
 
-number
-
 required
 
 buy\_history\_2h
-
-number
 
 required
 
 buy\_2h\_change\_percent
 
-number
-
 required
 
 volume\_2h
-
-number
 
 required
 
 volume\_2h\_usd
 
-number
-
 required
 
 volume\_history\_2h
-
-number
 
 required
 
 volume\_history\_2h\_usd
 
-number
-
 required
 
 volume\_2h\_change\_percent
-
-number
 
 required
 
 volume\_buy\_2h
 
-number
-
 required
 
 volume\_buy\_2h\_usd
-
-number
 
 required
 
 volume\_buy\_history\_2h
 
-number
-
 required
 
 volume\_buy\_history\_2h\_usd
-
-number
 
 required
 
 volume\_buy\_2h\_change\_percent
 
-number
-
 required
 
 volume\_sell\_2h
-
-number
 
 required
 
 volume\_sell\_2h\_usd
 
-number
-
 required
 
 volume\_sell\_history\_2h
-
-number
 
 required
 
 volume\_sell\_history\_2h\_usd
 
-number
-
 required
 
 volume\_sell\_2h\_change\_percent
-
-number
 
 required
 
 trade\_4h
 
-number
-
 required
 
 trade\_history\_4h
-
-number
 
 required
 
 trade\_4h\_change\_percent
 
-number
-
 required
 
 sell\_4h
-
-number
 
 required
 
 sell\_history\_4h
 
-number
-
 required
 
 sell\_4h\_change\_percent
-
-number
 
 required
 
 buy\_4h
 
-number
-
 required
 
 buy\_history\_4h
-
-number
 
 required
 
 buy\_4h\_change\_percent
 
-number
-
 required
 
 volume\_4h
-
-number
 
 required
 
 volume\_4h\_usd
 
-number
-
 required
 
 volume\_history\_4h
-
-number
 
 required
 
 volume\_history\_4h\_usd
 
-number
-
 required
 
 volume\_4h\_change\_percent
-
-number
 
 required
 
 volume\_buy\_4h
 
-number
-
 required
 
 volume\_buy\_4h\_usd
-
-number
 
 required
 
 volume\_buy\_history\_4h
 
-number
-
 required
 
 volume\_buy\_history\_4h\_usd
-
-number
 
 required
 
 volume\_buy\_4h\_change\_percent
 
-number
-
 required
 
 volume\_sell\_4h
-
-number
 
 required
 
 volume\_sell\_4h\_usd
 
-number
-
 required
 
 volume\_sell\_history\_4h
-
-number
 
 required
 
 volume\_sell\_history\_4h\_usd
 
-number
-
 required
 
 volume\_sell\_4h\_change\_percent
-
-number
 
 required
 
 trade\_8h
 
-number
-
 required
 
 trade\_history\_8h
-
-number
 
 required
 
 trade\_8h\_change\_percent
 
-number
-
 required
 
 sell\_8h
-
-number
 
 required
 
 sell\_history\_8h
 
-number
-
 required
 
 sell\_8h\_change\_percent
-
-number
 
 required
 
 buy\_8h
 
-number
-
 required
 
 buy\_history\_8h
-
-number
 
 required
 
 buy\_8h\_change\_percent
 
-number
-
 required
 
 volume\_8h
-
-number
 
 required
 
 volume\_8h\_usd
 
-number
-
 required
 
 volume\_history\_8h
-
-number
 
 required
 
 volume\_history\_8h\_usd
 
-number
-
 required
 
 volume\_8h\_change\_percent
-
-number
 
 required
 
 volume\_buy\_8h
 
-number
-
 required
 
 volume\_buy\_8h\_usd
-
-number
 
 required
 
 volume\_buy\_history\_8h
 
-number
-
 required
 
 volume\_buy\_history\_8h\_usd
-
-number
 
 required
 
 volume\_buy\_8h\_change\_percent
 
-number
-
 required
 
 volume\_sell\_8h
-
-number
 
 required
 
 volume\_sell\_8h\_usd
 
-number
-
 required
 
 volume\_sell\_history\_8h
-
-number
 
 required
 
 volume\_sell\_history\_8h\_usd
 
-number
-
 required
 
 volume\_sell\_8h\_change\_percent
-
-number
 
 required
 
 trade\_24h
 
-number
-
 required
 
 trade\_history\_24h
-
-number
 
 required
 
 trade\_24h\_change\_percent
 
-number
-
 required
 
 sell\_24h
-
-number
 
 required
 
 sell\_history\_24h
 
-number
-
 required
 
 sell\_24h\_change\_percent
-
-number
 
 required
 
 buy\_24h
 
-number
-
 required
 
 buy\_history\_24h
-
-number
 
 required
 
 buy\_24h\_change\_percent
 
-number
-
 required
 
 volume\_24h
-
-number
 
 required
 
 volume\_24h\_usd
 
-number
-
 required
 
 volume\_history\_24h
-
-number
 
 required
 
 volume\_history\_24h\_usd
 
-number
-
 required
 
 volume\_24h\_change\_percent
-
-number
 
 required
 
 volume\_buy\_24h
 
-number
-
 required
 
 volume\_buy\_24h\_usd
-
-number
 
 required
 
 volume\_buy\_history\_24h
 
-number
-
 required
 
 volume\_buy\_history\_24h\_usd
-
-number
 
 required
 
 volume\_buy\_24h\_change\_percent
 
-number
-
 required
 
 volume\_sell\_24h
-
-number
 
 required
 
 volume\_sell\_24h\_usd
 
-number
-
 required
 
 volume\_sell\_history\_24h
-
-number
 
 required
 
 volume\_sell\_history\_24h\_usd
 
-number
-
 required
 
 volume\_sell\_24h\_change\_percent
 
-number
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -1195,11 +805,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -1698,7 +1308,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

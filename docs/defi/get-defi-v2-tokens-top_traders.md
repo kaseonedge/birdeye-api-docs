@@ -7,17 +7,11 @@
 
 address
 
-string
-
 required
 
 The address of the token contract.
 
 time\_frame
-
-string
-
-enum
 
 required
 
@@ -25,13 +19,7 @@ Defaults to 24h
 
 30m1h2h4h6h8h12h24h
 
-Show 8 enum values
-
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -41,15 +29,9 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 sort\_by
-
-string
-
-enum
 
 required
 
@@ -59,9 +41,7 @@ Specify the sort field.
 
 volumetrade
 
-Allowed:
-
-`volume``trade`
+`volume` `trade`
 
 offset
 
@@ -85,25 +65,15 @@ Number of items per page.
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to scaled
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -111,21 +81,13 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing a list of top traded tokens
-
-object
+# 200      JSON object containing a list of top traded tokens
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -135,15 +97,9 @@ array of objects
 
 items
 
-object
-
 tokenAddress
 
-string
-
 owner
-
-string
 
 tags
 
@@ -153,11 +109,7 @@ tags
 
 type
 
-string
-
 volume
-
-number
 
 trade
 
@@ -173,29 +125,23 @@ integer
 
 volumeBuy
 
-number
-
 volumeSell
 
-number
+# 400      Bad Request
 
-# `` 400      Bad Request
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 429      Too Many Requests. Rate limit reached
 
-# `` 429      Too Many Requests. Rate limit reached
-
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -204,11 +150,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -251,7 +197,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

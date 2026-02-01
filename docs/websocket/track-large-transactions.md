@@ -16,19 +16,19 @@ This WebSocket message is used to subscribe to large trade transactions filtered
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_LARGE_TRADE_TXS",
     "min_volume": 10000,
     "max_volume": 20000
 }
-```
+` `
 
 ### Output Example   [Skip link to Output Example](https://docs.birdeye.so/reference/track-large-transactions\#output-example)
 
 JSON
 
-```json
+` `json
 {
     "type": "TXS_LARGE_TRADE_DATA",
     "data": {
@@ -60,7 +60,7 @@ JSON
         }
     }
 }
-```
+` `
 
 ### Explanation:   [Skip link to Explanation:](https://docs.birdeye.so/reference/track-large-transactions\#explanation)
 
@@ -75,8 +75,4 @@ JSON
 `volumeUSD`: Trade volume in USD.
 `network`: Blockchain network where the trade occurred.
 `from` and `to`: Details of the traded assets, including symbols, addresses, amounts, and pricing information.
-
-* * *
-
-* * *
 

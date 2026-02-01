@@ -5,34 +5,17 @@
 - Business
 - Enterprise
 
-Ideas 💡
-
-- Generates OHLCV data (Open, High, Low, Close, Volume) for a specific token pair.
-- Perfect for candlestick visualizations and pair-based price tracking.
-- Useful for DEX-specific analytics, pair monitoring, and market depth analysis.
-- Ideal for building custom charts, trade history tools, or price movement alerts.
-
-address
-
-string
-
 required
 
 The address of a pair contract
 
 type
 
-string
-
-enum
-
 required
 
 OHLCV time frame.
 
 1m3m5m15m30m1H2H4H6H8H12H1D3D1W1M
-
-Show 15 enum values
 
 time\_from
 
@@ -56,31 +39,19 @@ Specify the end time using unix timestamps in seconds
 
 x-chain
 
-string
-
-enum
-
 Defaults to solana
 
 A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing list of ohlcv data of a pair
-
-object
+# 200      JSON object containing list of ohlcv data of a pair
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -90,47 +61,31 @@ array of objects
 
 items
 
-object
-
 o
-
-number
 
 required
 
 h
 
-number
-
 required
 
 l
-
-number
 
 required
 
 c
 
-number
-
 required
 
 v
-
-number
 
 required
 
 address
 
-string
-
 required
 
 type
-
-string
 
 required
 
@@ -142,27 +97,23 @@ required
 
 currency
 
-string
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -171,11 +122,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -230,7 +181,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

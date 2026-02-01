@@ -4,17 +4,11 @@
 
 list\_address
 
-string
-
 required
 
 A list of token addresses in string separated by commas (,)
 
 x-chain
-
-string
-
-enum
 
 Defaults to base
 
@@ -22,23 +16,15 @@ Base network only.
 
 base
 
-Allowed:
-
 `base`
 
-# `` 200      OK
-
-object
+# 200      OK
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -52,29 +38,19 @@ A list of objects containing token exit liquidity data
 
 items\*
 
-object
-
 token
-
-string
 
 required
 
 exit\_liquidity
 
-number
-
 required
 
 liquidity
 
-number
-
 required
 
 price
-
-object
 
 required
 
@@ -82,61 +58,45 @@ price object
 
 currency
 
-string
-
 required
 
 address
-
-string
 
 required
 
 name
 
-string
-
 required
 
 symbol
-
-string
 
 required
 
 decimals
 
-string
-
 required
 
 extensions
-
-object
 
 required
 
 logo\_uri
 
-string
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
 curl --request GET \
 
@@ -145,11 +105,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: base'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -252,7 +212,5 @@ xxxxxxxxxx
   "success": true
 
 }
-```
-
-* * *
+` `
 

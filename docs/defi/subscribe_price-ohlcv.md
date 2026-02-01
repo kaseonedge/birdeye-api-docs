@@ -30,7 +30,7 @@ To receive real-time updates about price changes for a specific token in the for
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_PRICE",
     "data": {
@@ -40,13 +40,13 @@ JSON
         "currency": "usd"
     }
 }
-```
+` `
 
 ### Output Example   [Skip link to Output Example](https://docs.birdeye.so/reference/subscribe_price-ohlcv\#output-example)
 
 JSON
 
-```json
+` `json
 {
   "type": "PRICE_DATA",
   "data": {
@@ -62,7 +62,7 @@ JSON
     "address": "So11111111111111111111111111111111111111112"
   }
 }
-```
+` `
 
 ## 2 - Subscribe Pair Price (OHLCV)   [Skip link to 2 - Subscribe Pair Price (OHLCV)](https://docs.birdeye.so/reference/subscribe_price-ohlcv\#2---subscribe-pair-price-ohlcv)
 
@@ -72,7 +72,7 @@ To receive real-time updates about price changes for a specific token pair in th
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_PRICE",
     "data": {
@@ -82,13 +82,13 @@ JSON
         "currency": "pair"
     }
 }
-```
+` `
 
 ### Output Example   [Skip link to Output Example](https://docs.birdeye.so/reference/subscribe_price-ohlcv\#output-example-1)
 
 JSON
 
-```json
+` `json
 {
   "type": "PRICE_DATA",
   "data": {
@@ -104,7 +104,7 @@ JSON
     "address": "7qbRF6YsyGuLUVs6Y1q64bdVrfe4ZcUUz1JRdoVNUJnm"
   }
 }
-```
+` `
 
 ## 3 - Subscribe to Multiple Addresses Price (OHLCV) - Limit 100   [Skip link to 3 - Subscribe to Multiple Addresses Price (OHLCV) - Limit 100](https://docs.birdeye.so/reference/subscribe_price-ohlcv\#3---subscribe-to-multiple-addresses-price-ohlcv---limit-100)
 
@@ -118,7 +118,7 @@ The following example demonstrates how to subscribe to price changes for specifi
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_PRICE",
     "data": {
@@ -126,13 +126,13 @@ JSON
         "query": "(address = So11111111111111111111111111111111111111112 AND chartType = 1m AND currency = usd) OR (address = 7qbRF6YsyGuLUVs6Y1q64bdVrfe4ZcUUz1JRdoVNUJnm AND chartType = 3m AND currency = pair)"
     }
 }
-```
+` `
 
 ### Output Example (First Subscription)   [Skip link to Output Example (First Subscription)](https://docs.birdeye.so/reference/subscribe_price-ohlcv\#output-example-first-subscription)
 
 JSON
 
-```json
+` `json
 {
   "type": "PRICE_DATA",
   "data": {
@@ -148,13 +148,13 @@ JSON
     "address": "So11111111111111111111111111111111111111112"
   }
 }
-```
+` `
 
 ### Output Example (Second Subscription)   [Skip link to Output Example (Second Subscription)](https://docs.birdeye.so/reference/subscribe_price-ohlcv\#output-example-second-subscription)
 
 JSON
 
-```json
+` `json
 {
   "type": "PRICE_DATA",
   "data": {
@@ -170,11 +170,7 @@ JSON
     "address": "7qbRF6YsyGuLUVs6Y1q64bdVrfe4ZcUUz1JRdoVNUJnm"
   }
 }
-```
+` `
 
 Please note that the provided examples in the output sections are truncated for brevity. The actual output may contain additional fields and information. Adapt the subscription messages according to your requirements and process the received real-time data accordingly.
-
-* * *
-
-* * *
 

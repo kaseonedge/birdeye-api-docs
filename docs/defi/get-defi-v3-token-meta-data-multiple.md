@@ -4,17 +4,11 @@
 
 list\_address
 
-string
-
 required
 
 A list of token addresses in string separated by commas (,)
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -22,41 +16,31 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing metadata of multiple tokens
-
-object
+# 200      JSON object containing metadata of multiple tokens
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -65,11 +49,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -136,7 +120,5 @@ xxxxxxxxxx
   "success": true
 
 }
-```
-
-* * *
+` `
 

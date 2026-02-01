@@ -4,26 +4,11 @@
 - Business
 - Enterprise
 
-Ideas 💡
-
-- Returns current price and 24h volume for a specific token — essential for token snapshots.
-- Useful for lightweight dashboards, widgets, and summary views.
-- Ideal for tracking real-time liquidity and token momentum.
-- Helpful for building monitoring tools or alert systems for token performance.
-
-address
-
-string
-
 required
 
 The address of the token contract.
 
 type
-
-string
-
-enum
 
 required
 
@@ -33,15 +18,9 @@ Time frame/interval.
 
 1h2h4h8h24h
 
-Allowed:
-
-`1h``2h``4h``8h``24h`
+`1h` `2h` `4h` `8h` `24h`
 
 ui\_amount\_mode
-
-string
-
-enum
 
 Defaults to raw
 
@@ -49,15 +28,9 @@ Indicate whether to use the scaled amount for scaled ui amount tokens. Only supp
 
 rawscaledboth
 
-Allowed:
-
-`raw``scaled``both`
+`raw` `scaled` `both`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -65,27 +38,17 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing price and volume with changes data of a token
-
-object
+# 200      JSON object containing price and volume with changes data of a token
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
 price
-
-number
 
 required
 
@@ -97,57 +60,41 @@ required
 
 updateHumanTime
 
-string
-
 required
 
 volumeUSD
-
-number
 
 required
 
 volumeChangePercent
 
-number
-
 required
 
 priceChangePercent
-
-number
 
 required
 
 isScaledUiToken
 
-boolean
-
 scaledValue
-
-number
 
 multiplier
 
-number
+# 400      Bad Request
 
-# `` 400      Bad Request
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 429      Too Many Requests. Rate limit reached
 
-# `` 429      Too Many Requests. Rate limit reached
-
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -156,11 +103,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -185,7 +132,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

@@ -5,26 +5,11 @@
 - Business
 - Enterprise
 
-Ideas 💡
-
-- Retrieves detailed overview of a **single V3 liquidity pool** (Uniswap V3, Raydium CLMM, etc).
-- Includes liquidity, volume, fee APR — ideal for monitoring pool health and performance.
-- Great for building V3-specific dashboards, yield trackers, or LP analytics tools.
-- Useful to assess pool competitiveness before adding liquidity or making trades.
-
-address
-
-string
-
 required
 
 The address of a pair contract
 
 ui\_amount\_mode
-
-string
-
-enum
 
 Defaults to scaled
 
@@ -32,15 +17,9 @@ Indicate whether to use the scaled amount for scaled ui amount tokens. Only supp
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -48,43 +27,33 @@ SVM networks only.
 
 solanafogo
 
-Allowed:
+`solana` `fogo`
 
-`solana``fogo`
-
-# `` 200      JSON object containing pair(market) overview data of a specific pair
-
-object
+# 200      JSON object containing pair(market) overview data of a specific pair
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -93,11 +62,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -268,7 +237,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

@@ -12,9 +12,9 @@ The instructions for each type of objects are described below.
 
 ## WebSocket URL:   [Skip link to WebSocket URL:](https://docs.birdeye.so/reference/token-stats\#websocket-url)
 
-```undefined
+` `undefined
 wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
-```
+` `
 
 ### Header   [Skip link to Header](https://docs.birdeye.so/reference/token-stats\#header)
 
@@ -30,7 +30,7 @@ wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_TOKEN_STATS",
     "data": {
@@ -58,7 +58,7 @@ JSON
         }
     }
 }
-```
+` `
 
 On Solana, a valid address is required (e.g., 9SeRj4LjgENeKQujfxRNkGbXYPM3X2vr9C37Jg9AARfg).
 
@@ -68,20 +68,20 @@ A single connection supports querying multiple token addresses in one request, w
 
 JSON
 
-```json
+` `json
 {
     "type": "UNSUBSCRIBE_TOKEN_STATS",
     "data": {
         "address": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN"
     }
 }
-```
+` `
 
 ### Output Example   [Skip link to Output Example](https://docs.birdeye.so/reference/token-stats\#output-example)
 
 JSON
 
-```json
+` `json
 {
     "type": "TOKEN_STATS_DATA",
 	  "data": {
@@ -245,7 +245,7 @@ JSON
         "liquidity": 14376190.7797803
     }
 }
-```
+` `
 
 **Response Parameters:**
 
@@ -286,9 +286,5 @@ JSON
 | `unique_wallet_4h` | integer | Number of unique wallets transacting in last 4 hours | 4,308 |
 | `unique_wallet_8h` | integer | Number of unique wallets transacting in last 8 hours | 7,487 |
 | `unique_wallet_24h` | integer | Number of unique wallets transacting in last 24 hours | 14,036 |
-
-* * *
-
-* * *
 
 StripeM-Inner

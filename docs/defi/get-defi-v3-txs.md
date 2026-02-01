@@ -12,15 +12,6 @@
   - If only after\_time is provided (no before\_time), it must be within the last 30 days.
   - If only after\_block\_number is provided (no before\_block\_number), it must be within the most recent 500,000 blocks.
 
-Ideas 💡
-
-- Get recent DEX trades across all tokens and pairs on a specific chain.
-- Useful for building real-time trade feeds or monitoring on-chain activity.
-- Filter by DEX or chain to spot volume spikes or new trading patterns.
-- Ideal for dashboards, bots, or alert systems watching market flow.
-
-offset
-
 integer
 
 0 to 9999
@@ -41,23 +32,13 @@ Number of items per page.
 
 sort\_by
 
-string
-
-enum
-
 Defaults to block\_unix\_time
 
 block\_unix\_timeblock\_number
 
-Allowed:
-
-`block_unix_time``block_number`
+`block_unix_time` `block_number`
 
 sort\_type
-
-string
-
-enum
 
 Defaults to desc
 
@@ -65,45 +46,27 @@ Specify the sort order.
 
 desc
 
-Allowed:
-
 `desc`
 
 tx\_type
-
-string
-
-enum
 
 Defaults to swap
 
 swapaddremoveall
 
-Allowed:
-
-`swap``add``remove``all`
+`swap` `add` `remove` `all`
 
 source
-
-string
-
-enum
 
 Source of the liquidity (AMMs). Only support solana.
 
 raydiumraydiumraydium\_clammraydium\_cporcalifinityfluxbeamsaberphoenixbonkswappump\_dot\_funmeteora\_dlmm
 
-Show 11 enum values
-
 owner
-
-string
 
 The address of the wallet.
 
 pool\_id
-
-string
 
 The address of the liquidity pool.
 
@@ -141,25 +104,15 @@ Specify the lower bound of block\_number for the filter range, excluding values 
 
 ui\_amount\_mode
 
-string
-
-enum
-
 Defaults to scaled
 
 Indicate whether to use the scaled amount for scaled ui amount tokens. Only support solana
 
 rawscaled
 
-Allowed:
-
-`raw``scaled`
+`raw` `scaled`
 
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -167,21 +120,13 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-Show 15 enum values
-
-# `` 200      JSON object containing trades
-
-object
+# 200      JSON object containing trades
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -193,33 +138,27 @@ required
 
 items\*
 
-object
-
 View Additional Properties
 
 hasNext
 
-boolean
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -228,11 +167,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -331,7 +270,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

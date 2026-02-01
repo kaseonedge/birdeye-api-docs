@@ -4,63 +4,33 @@
 
 wallet
 
-string
-
 required
 
 token\_address
 
-string
-
 flow
-
-string
 
 time\_from
 
-number
-
 time\_to
-
-number
 
 from\_amount
 
-number
-
 to\_amount
-
-number
 
 from\_value
 
-number
-
 to\_value
-
-number
 
 from\_wallet
 
-string
-
 to\_wallet
-
-string
 
 cursor
 
-string
-
 limit
 
-number
-
 x-chain
-
-string
-
-enum
 
 Defaults to solana
 
@@ -68,43 +38,33 @@ Solana network only.
 
 solana
 
-Allowed:
-
 `solana`
 
-# `` 200      JSON object containing list transfer
-
-object
+# 200      JSON object containing list transfer
 
 success
-
-boolean
 
 required
 
 data
 
-object
-
 required
 
-# `` 400      Bad Request
+# 400      Bad Request
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 429      Too Many Requests. Rate limit reached
+# 429      Too Many Requests. Rate limit reached
 
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request POST \
 
@@ -115,11 +75,11 @@ curl --request POST \
      --header 'content-type: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -178,7 +138,5 @@ xxxxxxxxxx
   ]
 
 }
-```
-
-* * *
+` `
 

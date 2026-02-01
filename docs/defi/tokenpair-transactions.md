@@ -24,7 +24,7 @@ To receive real-time updates about transactions for a specific token, you can us
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_TXS",
     "data": {
@@ -33,7 +33,7 @@ JSON
 				"txsType": "all"
     }
 }
-```
+` `
 
 You can pass any of the following values to `txsType`: "all", "add\_remove\_liquidity", "add\_liquidity", "remove\_liquidity", "swap" to filter transaction types.
 If `txsType` is not provided, the result will default to returning all transaction types, the same as when using "all".
@@ -42,7 +42,7 @@ If `txsType` is not provided, the result will default to returning all transacti
 
 JSON
 
-```json
+` `json
 {
   "type": "TXS_DATA",
   "data": {
@@ -90,7 +90,7 @@ JSON
     "poolId": "1amiJLvkVHjPz7t8dwBsWHknHitcpqwPPuuUCfHyzjB"
   }
 }
-```
+` `
 
 ## 2 - Subscribe Pair Transactions   [Skip link to 2 - Subscribe Pair Transactions](https://docs.birdeye.so/reference/tokenpair-transactions\#2---subscribe-pair-transactions)
 
@@ -100,7 +100,7 @@ To receive real-time updates about transactions for a specific token pair, you c
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_TXS",
     "data": {
@@ -109,7 +109,7 @@ JSON
 			 "txsType":"all"
     }
 }
-```
+` `
 
 You can pass any of the following values to `txsType`: "all", "add\_remove\_liquidity", "add\_liquidity", "remove\_liquidity", "swap" to filter transaction types.
 If `txsType` is not provided, the result will default to returning all transaction types, the same as when using "all".
@@ -118,7 +118,7 @@ If `txsType` is not provided, the result will default to returning all transacti
 
 JSON
 
-```json
+` `json
  type: 'TXS_DATA',
   data: {
     blockUnixTime: 1714107255,
@@ -160,7 +160,7 @@ JSON
     }
   }
 }
-```
+` `
 
 ## 3 - Subscribe to Multiple Addresses (Limit 100)   [Skip link to 3 - Subscribe to Multiple Addresses (Limit 100)](https://docs.birdeye.so/reference/tokenpair-transactions\#3---subscribe-to-multiple-addresses-limit-100)
 
@@ -174,7 +174,7 @@ The following example demonstrates how to subscribe to transactions for either a
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_TXS",
     "data": {
@@ -183,7 +183,7 @@ JSON
 				"txsType":"all"
     }
 }
-```
+` `
 
 You can pass any of the following values to `txsType`: "all", "add\_remove\_liquidity", "add\_liquidity", "remove\_liquidity", "swap" to filter transaction types.
 If `txsType` is not provided, the result will default to returning all transaction types, the same as when using "all".
@@ -192,7 +192,7 @@ If `txsType` is not provided, the result will default to returning all transacti
 
 JSON
 
-```json
+` `json
 {
     "type": "TXS_DATA",
     "data": {
@@ -203,7 +203,7 @@ JSON
         ...
     }
 }
-```
+` `
 
 The two WebSocket messages differ in their subscription type (complex vs simple), and as a result, there are key differences in the structure of the resulting **TXS\_DATA** responses.
 
@@ -213,7 +213,7 @@ The two WebSocket messages differ in their subscription type (complex vs simple)
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_TXS",
     "data": {
@@ -222,7 +222,7 @@ JSON
 				"txsType":"all"
     }
 }
-```
+` `
 
 **Query**:
 
@@ -233,7 +233,7 @@ JSON
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_TXS",
     "data": {
@@ -242,7 +242,7 @@ JSON
 				"txsType":"all"
     }
 }
-```
+` `
 
 **Query**:
 
@@ -266,7 +266,7 @@ JSON
 
 JSON
 
-```json
+` `json
 {
     "type": "TXS_DATA",
     "data": {
@@ -310,7 +310,7 @@ JSON
         "poolId": "0xd845f7D4f4DeB9Ff5bCf09D140Ef13718F6f6C71"
     }
 }
-```
+` `
 
 **SIMPLE** query is specialized for token-level tracking, likely focused on the specific token contract address as the selling/swapping asset. It gives extra fields (like tokenPrice, network, pricePair) that are useful in token-centric analytics.
 
@@ -318,7 +318,7 @@ JSON
 
 JSON
 
-```json
+` `json
 {
     "type": "TXS_DATA",
     "data": {
@@ -367,9 +367,5 @@ JSON
         "poolId": "0xB7E50106A5bd3Cf21AF210A755F9C8740890A8c9"
     }
 }
-```
-
-* * *
-
-* * *
+` `
 

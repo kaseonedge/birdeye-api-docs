@@ -6,9 +6,9 @@ The instructions for each type of objects are described below.
 
 ## WebSocket URL:   [Skip link to WebSocket URL:](https://docs.birdeye.so/reference/new-token-listing\#websocket-url)
 
-```undefined
+` `undefined
 wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
-```
+` `
 
 ### Header   [Skip link to Header](https://docs.birdeye.so/reference/new-token-listing\#header)
 
@@ -22,17 +22,17 @@ wss://public-api.birdeye.so/socket/solana?x-api-key=YOUR-API-KEY
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_TOKEN_NEW_LISTING"
 }
-```
+` `
 
 Or:
 
 JSON
 
-```json
+` `json
 {
     "type": "SUBSCRIBE_TOKEN_NEW_LISTING",
     "meme_platform_enabled": true,
@@ -40,7 +40,7 @@ JSON
     "max_liquidity": 10000,
 		"sources": ["pump_dot_fun", "meteora_dynamic_bonding_curve"],
 }
-```
+` `
 
 **Key Notes:**
 
@@ -53,7 +53,7 @@ JSON
 
 JSON
 
-```json
+` `json
 {
     "type": "TOKEN_NEW_LISTING_DATA",
     "data": {
@@ -65,7 +65,7 @@ JSON
         "liquidityAddedAt": 1720155863
     }
 }
-```
+` `
 
 **Response Parameters:**
 
@@ -190,9 +190,5 @@ JSON
 | EKUBO | ekubo |
 | ONDO | OndoFinance |
 | FLUID | fluid |
-
-* * *
-
-* * *
 
 StripeM-Inner

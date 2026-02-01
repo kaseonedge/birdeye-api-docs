@@ -6,17 +6,11 @@
 
 address
 
-string
-
 required
 
 The address of the token contract.
 
 sort\_by
-
-string
-
-enum
 
 required
 
@@ -26,15 +20,9 @@ Specify the sort order for mint/burn transactions. Filter for records with sort 
 
 block\_time
 
-Allowed:
-
 `block_time`
 
 sort\_type
-
-string
-
-enum
 
 required
 
@@ -44,15 +32,9 @@ Specify the sort order.
 
 descasc
 
-Allowed:
-
-`desc``asc`
+`desc` `asc`
 
 type
-
-string
-
-enum
 
 required
 
@@ -62,9 +44,7 @@ Specify the type of mint/burn transactions. Filter for records with type equal t
 
 allmintburn
 
-Allowed:
-
-`all``mint``burn`
+`all` `mint` `burn`
 
 after\_time
 
@@ -100,33 +80,21 @@ Number of items per page.
 
 x-chain
 
-string
-
-enum
-
 Defaults to solana
 
 Solana network only.
 
 solana
 
-Allowed:
-
 `solana`
 
-# `` 200      JSON object containing a list of mint/burn transactions
-
-object
+# 200      JSON object containing a list of mint/burn transactions
 
 success
-
-boolean
 
 required
 
 data
-
-object
 
 required
 
@@ -136,69 +104,43 @@ array of objects
 
 items
 
-object
-
 amount
-
-string
 
 block\_human\_time
 
-string
-
 block\_time
-
-number
 
 common\_type
 
-string
-
 decimals
-
-number
 
 mint
 
-string
-
 program\_id
-
-string
 
 slot
 
-number
-
 tx\_hash
-
-string
 
 ui\_amount
 
-number
-
 ui\_amount\_string
 
-string
+# 400      Bad Request
 
-# `` 400      Bad Request
+# 401      Unauthorized. API key is missing or invalid
 
-# `` 401      Unauthorized. API key is missing or invalid
+# 403      Forbidden. Request is blacklisted or not whitelisted
 
-# `` 403      Forbidden. Request is blacklisted or not whitelisted
+# 429      Too Many Requests. Rate limit reached
 
-# `` 429      Too Many Requests. Rate limit reached
-
-# `` 500      Internal Server Error
-
-* * *
+# 500      Internal Server Error
 
 ShellPythonJavaScriptGo
 
-```
+` `
 
-xxxxxxxxxx
+
 
 curl --request GET \
 
@@ -207,11 +149,11 @@ curl --request GET \
      --header 'accept: application/json' \
 
      --header 'x-chain: solana'
-```
+` `
 
-```
+` `
 
-xxxxxxxxxx
+
 
 {
 
@@ -252,7 +194,5 @@ xxxxxxxxxx
   }
 
 }
-```
-
-* * *
+` `
 

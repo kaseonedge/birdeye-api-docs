@@ -47,7 +47,11 @@ solana
 
 `solana`
 
-# 200      JSON object containing a wallet’s PnL
+
+## Responses
+
+**200** ✅ -      JSON object containing a wallet’s PnL
+
 
 success
 
@@ -57,15 +61,20 @@ data
 
 required
 
-# 400      Bad Request
+**400** ⚠️ -      Bad Request
 
-# 401      Unauthorized. API key is missing or invalid
 
-# 403      Forbidden. Request is blacklisted or not whitelisted
+**401** ⚠️ -      Unauthorized. API key is missing or invalid
 
-# 429      Too Many Requests. Rate limit reached
 
-# 500      Internal Server Error
+**403** ⚠️ -      Forbidden. Request is blacklisted or not whitelisted
+
+
+**429** ⚠️ -      Too Many Requests. Rate limit reached
+
+
+**500** ⚠️ -      Internal Server Error
+
 
 ShellPythonJavaScriptGo
 

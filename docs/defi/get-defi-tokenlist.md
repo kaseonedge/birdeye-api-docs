@@ -75,7 +75,11 @@ A chain name listed in supported networks.
 
 solanaethereumarbitrumavalanchebscoptimismpolygonbasezksyncmonadhyperevmaptosfogomantlesui
 
-# 200      JSON object containing a list of tokens with certain fields
+
+## Responses
+
+**200** ✅ -      JSON object containing a list of tokens with certain fields
+
 
 success
 
@@ -123,15 +127,20 @@ v24hChangePercent
 
 v24hUSD
 
-# 400      Bad Request
+**400** ⚠️ -      Bad Request
 
-# 401      Unauthorized. API key is missing or invalid
 
-# 403      Forbidden. Request is blacklisted or not whitelisted
+**401** ⚠️ -      Unauthorized. API key is missing or invalid
 
-# 429      Too Many Requests. Rate limit reached
 
-# 500      Internal Server Error
+**403** ⚠️ -      Forbidden. Request is blacklisted or not whitelisted
+
+
+**429** ⚠️ -      Too Many Requests. Rate limit reached
+
+
+**500** ⚠️ -      Internal Server Error
+
 
 ShellPythonJavaScriptGo
 

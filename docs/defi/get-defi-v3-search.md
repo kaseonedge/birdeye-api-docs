@@ -106,7 +106,11 @@ rawscaled
 
 `raw` `scaled`
 
-# 200      Search for token and market data matching keyword, tokenAddress using full-text search
+
+## Responses
+
+**200** ✅ -      Search for token and market data matching keyword, tokenAddress using full-text search
+
 
 success
 
@@ -136,15 +140,20 @@ required
 
 result\*
 
-# 400      Bad Request
+**400** ⚠️ -      Bad Request
 
-# 401      Unauthorized. API key is missing or invalid
 
-# 403      Forbidden. Request is blacklisted or not whitelisted
+**401** ⚠️ -      Unauthorized. API key is missing or invalid
 
-# 429      Too Many Requests. Rate limit reached
 
-# 500      Internal Server Error
+**403** ⚠️ -      Forbidden. Request is blacklisted or not whitelisted
+
+
+**429** ⚠️ -      Too Many Requests. Rate limit reached
+
+
+**500** ⚠️ -      Internal Server Error
+
 
 Updated 2 months ago
 
